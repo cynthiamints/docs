@@ -1,0 +1,192 @@
+---
+title: Section Headline
+description: Define a section headline with optional subheadline, body, and images
+---
+
+# Section Headline
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+This seed defines a section headline block in CXF, including a main headline, subheadline, body text, and optional background/foreground images.
+
+---
+
+## 📋 Fields
+
+| Group | Field | Slug | Data Type | Appearance | Is Array | Has Index | Allow Facets | Required | Hidden | Placeholder | Help Text | Recommended Validations |
+|-------|-------|------|-----------|------------|----------|-----------|--------------|----------|--------|-------------|-----------|-------------------------|
+| Default | **Headline** | `headline` | Text | Full Formatted | FALSE | FALSE | FALSE | FALSE | FALSE | Your Engaging Headline | Main title for the section. | – |
+| Default | **Subheadline** | `subheadline` | Text | Full Formatted | FALSE | FALSE | FALSE | FALSE | FALSE | Supporting text below... | Secondary descriptive text for the section. | – |
+| Default | **Body** | `body` | Text | Full Formatted | FALSE | FALSE | FALSE | FALSE | FALSE | – | – | – |
+| Default | **Background Image** | `background_image` | Media | Image | FALSE | FALSE | FALSE | FALSE | FALSE | Upload background image | Large image to fill the background of the section. | – |
+| Default | **Background Image Alt** | `background_image_alt` | Text | Short | FALSE | FALSE | FALSE | FALSE | FALSE | Description of background image | Alt text for the background image. | Max length 120 |
+| Default | **Foreground Image** | `foreground_image` | Media | Image | FALSE | FALSE | FALSE | FALSE | FALSE | Upload foreground image | Smaller, often decorative image, appearing over the background. | – |
+| Default | **Foreground Image Alt** | `foreground_image_alt` | Text | Short | FALSE | FALSE | FALSE | FALSE | FALSE | Description of foreground image | Alt text for the foreground image. | Max length 120 |
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples.
+
+---
+
+## 📦 JSON Seed
+
+```json
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Section Headline",
+      "slug": "section-headline",
+      "type": "blocks",
+      "default_tags_ids": ["v1"]
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Headline",
+      "slug": "headline",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Your Engaging Headline",
+      "help_text": "Main title for the section.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'section-headline')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "headline"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Subheadline",
+      "slug": "subheadline",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Supporting text below...",
+      "help_text": "Secondary descriptive text for the section.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'section-headline')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "subheadline"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Body",
+      "slug": "body",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'section-headline')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "body"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Background Image",
+      "slug": "background_image",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Upload background image",
+      "help_text": "Large image to fill the background of the section.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'section-headline')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "background_image"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Background Image Alt",
+      "slug": "background_image_alt",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Description of background image",
+      "help_text": "Alt text for the background image.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'section-headline')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "background_image_alt",
+      "validations": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Foreground Image",
+      "slug": "foreground_image",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Upload foreground image",
+      "help_text": "Smaller, often decorative image, appearing over the background.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'section-headline')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "foreground_image"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Foreground Image Alt",
+      "slug": "foreground_image_alt",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Description of foreground image",
+      "help_text": "Alt text for the foreground image.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'section-headline')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "foreground_image_alt",
+      "validations": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  }
+]

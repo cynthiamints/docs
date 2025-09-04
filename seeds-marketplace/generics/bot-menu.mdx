@@ -1,0 +1,129 @@
+---
+title: Bot Menu
+description: Define a conversational bot menu with greeting and quick action buttons
+---
+
+# Bot Menu
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+This seed defines a **Bot Menu** block in CXF, including a greeting message and a list of predefined actions (quick replies or buttons).
+
+---
+
+## 📋 Fields
+
+| Group   | Field     | Slug     | Data Type | Appearance | Is Array | Required | Hidden | Placeholder              | Help Text | Recommended Validations |
+|---------|-----------|----------|-----------|------------|----------|----------|--------|--------------------------|-----------|-------------------------|
+| Default | **Greeting** | `greeting` | Text | Short | FALSE | TRUE | FALSE | Hello! How can I help? | The initial message displayed by the bot. | – |
+| Actions | **Actions** | `actions` | Group | Default | TRUE | – | FALSE | – | A list of predefined actions or quick replies the bot can offer. | Min 1 action |
+| Actions | **Label** | `actions.label` | Text | Short | FALSE | TRUE | FALSE | View Products | The visible text for a bot action button or link. | Min 0; Max 50 |
+| Actions | **Action** | `actions.action` | Text | Short | FALSE | TRUE | FALSE | /products | The internal command or URL triggered by the action. | Must be valid URL or internal path (regex validation) |
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples.
+
+---
+
+## 📦 JSON Seed
+
+```json
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Bot Menu",
+      "slug": "bot_menu",
+      "type": "blocks",
+      "default_tags_ids": ["v1"]
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Greeting",
+      "slug": "greeting",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "Hello! How can I help?",
+      "help_text": "The initial message displayed by the bot.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'bot_menu')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "greeting"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Actions",
+      "slug": "actions",
+      "data_type": "group",
+      "appearance": "default",
+      "is_array": true,
+      "is_disabled": false,
+      "is_hidden": false,
+      "help_text": "A list of predefined actions or quick replies the bot can offer.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'bot_menu')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "actions"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Label",
+      "slug": "label",
+      "parent_id": "{{getAttributeGroup('print_versions', 'actions', 'bot_menu', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "View Products",
+      "help_text": "The visible text for a bot action button or link.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'bot_menu')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "actions.label",
+      "validations": {
+        "min": 0,
+        "max": 50
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Action",
+      "slug": "action",
+      "parent_id": "{{getAttributeGroup('print_versions', 'actions', 'bot_menu', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "/products",
+      "help_text": "The internal command or URL triggered by the action.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'bot_menu')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "actions.action",
+      "validations": {
+        "regular_expression": "/^(http|https):\\/\\/[^ \\/$.?#].[^\\s]*$|^\\/[^\\s]*$/"
+      }
+    }
+  }
+]

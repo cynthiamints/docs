@@ -1,0 +1,1229 @@
+---
+title: "Site Settings"
+description: "Configure global site settings for CXF projects"
+---
+
+# Site Settings
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This seed defines the global configuration for your CXF site.
+
+---
+
+## 📋 Fields
+
+| Field                        | Description                                 |
+| ---------------------------- | ------------------------------------------- |
+| **Site Name**                | The display name of your site               |
+| **Brand Tagline**            | Short tagline shown in metadata and UI      |
+| **Primary Color**            | Main brand color (hex or rgba)              |
+| **Secondary Color**          | Secondary brand color                       |
+| **Logo**                     | Path or URL to logo image                   |
+| **Favicon**                  | Path or URL to favicon                      |
+| **Apple Touch Icon**         | iOS home screen icon                        |
+| **Manifest Icon 192**        | PWA manifest icon (192px)                   |
+| **Manifest Icon 512**        | PWA manifest icon (512px)                   |
+| **Theme Color**              | Browser theme color                         |
+| **Primary Domain**           | Main domain for the site                    |
+| **Additional Domains**       | Extra domains (comma-separated)             |
+| **Default Locale**           | Default language/locale                     |
+| **Supported Locales**        | List of supported locales                   |
+| **Hreflang Strategy**        | SEO hreflang handling                       |
+| **SEO Title Template**       | Template for SEO titles                     |
+| **Default SEO Title**        | Fallback SEO title                          |
+| **Default Meta Description** | Fallback meta description                   |
+| **Canonical Base URL**       | Base URL for canonical tags                 |
+| **Robots Indexing**          | Allow/disallow indexing                     |
+| **Robots Follow**            | Allow/disallow link following               |
+| **Open Graph Image Default** | Default OG image                            |
+| **Social Profiles**          | Links to social profiles                    |
+| **Share Hashtags**           | Default hashtags for sharing                |
+| **Google Analytics 4 ID**    | GA4 tracking ID                             |
+| **Google Tag Manager ID**    | GTM container ID                            |
+| **Meta Pixel ID**            | Facebook Pixel ID                           |
+| **Anonymize IP**             | Enable IP anonymization                     |
+| **Respect Do Not Track**     | Honor DNT browser setting                   |
+| **Company Legal Name**       | Legal entity name                           |
+| **Privacy Policy URL**       | Link to privacy policy                      |
+| **Terms of Service URL**     | Link to ToS                                 |
+| **Cookies Policy URL**       | Link to cookies policy                      |
+| **Consent Banner Enabled**   | Enable/disable cookie consent               |
+| **Consent Banner Text**      | Text shown in consent banner                |
+| **Learn More URL**           | Link for more info                          |
+| **Consent Categories**       | Categories of consent                       |
+| **PWA Enabled**              | Enable Progressive Web App                  |
+| **PWA Short Name**           | Short name for PWA                          |
+| **PWA Start URL**            | Start URL for PWA                           |
+| **PWA Display Mode**         | Display mode (standalone, fullscreen, etc.) |
+| **PWA Background Color**     | Background color for splash screen          |
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples.
+
+---
+
+## 📦 JSON Seed
+
+```json expandable
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Site Settings",
+      "slug": "site-settings",
+      "type": "blocks",
+      "default_tags_ids": ["v1"]
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Identity and Branding",
+      "slug": "identity_and_branding",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Site Name",
+      "slug": "site_name",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "placeholder": "My Website",
+      "help_text": "Public name of the site, used in SEO title templates and branding. 3\u201380 characters.",
+      "is_array": false,
+      "allow_facets": true,
+      "has_index": true,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.site_name",
+      "validations": {
+        "min": 3,
+        "max": 80
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Brand Tagline",
+      "slug": "brand_tagline",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "min": 0,
+        "max": 120
+      },
+      "placeholder": "Your trusted partner",
+      "help_text": "Short marketing phrase for headers, footers, or meta descriptions. \u2264120 characters.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.brand_tagline"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Primary Color",
+      "slug": "primary_color",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$\/"
+      },
+      "placeholder": "#0044CC",
+      "help_text": "Hexadecimal brand color for primary UI. Pattern: `^#([A-Fa-f0-9]{6}`",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.primary_color"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Secondary Color",
+      "slug": "secondary_color",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$\/"
+      },
+      "placeholder": "#FF6600",
+      "help_text": "Secondary accent color for highlights or campaigns. Same hex format as primary.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.secondary_color"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Logo",
+      "slug": "logo",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "image",
+      "help_text": "Main logo in SVG or high-res PNG. Max size 512 KB. Include alt text.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "media",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.logo"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Favicon",
+      "slug": "favicon",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "image",
+      "help_text": "Icon for browser tabs. ICO or PNG, 32\u00d732 px min.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "media",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.favicon"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Apple Touch Icon",
+      "slug": "apple_touch_icon",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "image",
+      "help_text": "Icon for iOS home screen. PNG 180\u00d7180 px. Avoid small text.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "media",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.apple_touch_icon"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Manifest Icon 192",
+      "slug": "manifest_icon_192",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "image",
+      "help_text": "PWA manifest icon for browsers. PNG 192\u00d7192 px.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "media",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.manifest_icon_192"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Manifest Icon 512",
+      "slug": "manifest_icon_512",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "image",
+      "help_text": "Large PWA manifest icon for splash screens. PNG 512\u00d7512 px.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "media",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.manifest_icon_512"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Theme Color",
+      "slug": "theme_color",
+      "parent_id": "{{getAttributeGroup('print_versions', 'identity_and_branding', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$\/"
+      },
+      "placeholder": "#0044CC",
+      "help_text": "Mobile browser UI and PWA background color. Hex format.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "identity_and_branding.theme_color"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Domains and Locales",
+      "slug": "domains_and_locales",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "domains_and_locales"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Primary Domain",
+      "slug": "primary_domain",
+      "parent_id": "{{getAttributeGroup('print_versions', 'domains_and_locales', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^https:\\\/\\\/.+\/"
+      },
+      "placeholder": "https:\/\/www.example.com",
+      "help_text": "Main site URL (HTTPS). Used for canonical links.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "domains_and_locales.primary_domain"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "SEO Defaults",
+      "slug": "seo_defaults",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "seo_defaults"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "SEO Title Template",
+      "slug": "seo_title_template",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_defaults', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/%pageTitle%\/"
+      },
+      "placeholder": "%pageTitle% \u00b7 %siteName%",
+      "help_text": "Template for page titles. Must contain %pageTitle%.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "seo_defaults.seo_title_template"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Canonical Base URL",
+      "slug": "canonical_base",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_defaults', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^https:\\\/\\\/.+\/"
+      },
+      "placeholder": "https:\/\/www.example.com",
+      "help_text": "Prepended to relative canonical URLs.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "seo_defaults.canonical_base"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Open Graph Image Default",
+      "slug": "og_image_default",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_defaults', 'site-settings', 'blocks')}}",
+      "appearance": "image",
+      "help_text": "Default OG image. 1200\u00d7630 px PNG\/JPG.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "media",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "seo_defaults.og_image_default"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Social and Sharing",
+      "slug": "social_and_sharing",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "social_and_sharing"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Analytics and Tracking",
+      "slug": "analytics_and_tracking",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "analytics_and_tracking"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Google Analytics 4 ID",
+      "slug": "ga4_measurement_id",
+      "parent_id": "{{getAttributeGroup('print_versions', 'analytics_and_tracking', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^G-[A-Z0-9]+$\/"
+      },
+      "placeholder": "G-XXXXXXX",
+      "help_text": "GA4 Measurement ID. Pattern: ^G-[A-Z0-9]+$.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "analytics_and_tracking.ga4_measurement_id"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Google Tag Manager ID",
+      "slug": "gtm_container_id",
+      "parent_id": "{{getAttributeGroup('print_versions', 'analytics_and_tracking', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^GTM-[A-Z0-9]+$\/"
+      },
+      "placeholder": "GTM-XXXXXX",
+      "help_text": "GTM Container ID. Pattern: ^GTM-[A-Z0-9]+$.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "analytics_and_tracking.gtm_container_id"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Meta Pixel ID",
+      "slug": "meta_pixel_id",
+      "parent_id": "{{getAttributeGroup('print_versions', 'analytics_and_tracking', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^[0-9]+$\/"
+      },
+      "placeholder": "1234567890",
+      "help_text": "Meta (Facebook) Pixel ID. Numeric only.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "analytics_and_tracking.meta_pixel_id"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Legal and Compliance",
+      "slug": "legal_and_compliance",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "legal_and_compliance"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Consent Policy",
+      "slug": "consent_policy",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "consent_policy"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "PWA",
+      "slug": "pwa",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "pwa"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "PWA Start URL",
+      "slug": "pwa_start_url",
+      "parent_id": "{{getAttributeGroup('print_versions', 'pwa', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^\\\/.+\/"
+      },
+      "placeholder": "\/",
+      "help_text": "Path to open when PWA launches. Usually \/.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "pwa.pwa_start_url"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "PWA Background Color",
+      "slug": "pwa_background_color",
+      "parent_id": "{{getAttributeGroup('print_versions', 'pwa', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^#?([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$\/"
+      },
+      "placeholder": "#FFFFFF",
+      "help_text": "Splash screen background color in hex format.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "pwa.pwa_background_color"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Additional Domains",
+      "slug": "additional_domains",
+      "parent_id": "{{getAttributeGroup('print_versions', 'domains_and_locales', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^https:\\\/\\\/.+\/"
+      },
+      "help_text": "Extra domains pointing to the site. Include protocol.",
+      "is_array": true,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "domains_and_locales.additional_domains"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Supported Locales",
+      "slug": "supported_locales",
+      "parent_id": "{{getAttributeGroup('print_versions', 'domains_and_locales', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^[a-z]{2}(-[A-Z]{2})?$\/"
+      },
+      "placeholder": "en-US, es-MX",
+      "help_text": "Languages\/regions site supports.",
+      "is_array": true,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "domains_and_locales.supported_locales"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Default Locale",
+      "slug": "default_locale",
+      "parent_id": "{{getAttributeGroup('print_versions', 'domains_and_locales', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^[a-z]{2}(-[A-Z]{2})?$\/"
+      },
+      "placeholder": "en-US",
+      "help_text": "Primary language\/region code.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": true,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "domains_and_locales.default_locale"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Hreflang Strategy",
+      "slug": "hreflang_strategy",
+      "parent_id": "{{getAttributeGroup('print_versions', 'domains_and_locales', 'site-settings', 'blocks')}}",
+      "appearance": "list",
+      "options": [
+        "all-locales",
+        "matching-only",
+        "custom"
+      ],
+      "placeholder": "all-locales",
+      "help_text": "Controls generation of <link hreflang> tags.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "domains_and_locales.hreflang_strategy"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Robots Indexing",
+      "slug": "robots_indexing",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_defaults', 'site-settings', 'blocks')}}",
+      "appearance": "list",
+      "options": [
+        "index",
+        "noindex"
+      ],
+      "placeholder": "index",
+      "help_text": "Controls search engine indexing.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "seo_defaults.robots_indexing"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Robots Follow",
+      "slug": "robots_follow",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_defaults', 'site-settings', 'blocks')}}",
+      "appearance": "list",
+      "options": [
+        "follow",
+        "nofollow"
+      ],
+      "placeholder": "follow",
+      "help_text": "Controls search engine link following.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "seo_defaults.robots_follow"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Default SEO Title",
+      "slug": "default_seo_title",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_defaults', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "min": 0,
+        "max": 60
+      },
+      "placeholder": "Welcome to Example",
+      "help_text": "Used if page has no title. Max 60 chars.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "seo_defaults.default_seo_title"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Default Meta Description",
+      "slug": "default_meta_description",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_defaults', 'site-settings', 'blocks')}}",
+      "appearance": "long",
+      "validations": {
+        "min": 0,
+        "max": 160
+      },
+      "placeholder": "Your go-to site for...",
+      "help_text": "Used if no page-level description. Max 160 chars.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "seo_defaults.default_meta_description"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Share Hashtags",
+      "slug": "share_hashtags",
+      "parent_id": "{{getAttributeGroup('print_versions', 'social_and_sharing', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^#.+\/"
+      },
+      "placeholder": "#brand #promo",
+      "help_text": "Hashtags for social sharing, max 3.",
+      "is_array": true,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "social_and_sharing.share_hashtags"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Company Legal Name",
+      "slug": "company_legal_name",
+      "parent_id": "{{getAttributeGroup('print_versions', 'legal_and_compliance', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "min": 0,
+        "max": 120
+      },
+      "placeholder": "Example Corp.",
+      "help_text": "Registered legal entity name.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "legal_and_compliance.company_legal_name"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Consent Banner Text",
+      "slug": "consent_banner_text",
+      "parent_id": "{{getAttributeGroup('print_versions', 'consent_policy', 'site-settings', 'blocks')}}",
+      "appearance": "long",
+      "validations": {
+        "min": 0,
+        "max": 300
+      },
+      "placeholder": "We use cookies to improve your experience...",
+      "help_text": "Text shown in consent banner. Keep short and clear.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "consent_policy.consent_banner_text"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Consent Categories",
+      "slug": "consent_categories",
+      "parent_id": "{{getAttributeGroup('print_versions', 'consent_policy', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "placeholder": "necessary, analytics, marketing",
+      "help_text": "Categories of cookies or tracking to collect consent for.",
+      "is_array": true,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "consent_policy.consent_categories"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "PWA Short Name",
+      "slug": "pwa_short_name",
+      "parent_id": "{{getAttributeGroup('print_versions', 'pwa', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "min": 0,
+        "max": 12
+      },
+      "placeholder": "ExampleApp",
+      "help_text": "Short display name (max 12 characters) for installed PWA.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "pwa.pwa_short_name"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Anonymize IP",
+      "slug": "anonymize_ip",
+      "parent_id": "{{getAttributeGroup('print_versions', 'analytics_and_tracking', 'site-settings', 'blocks')}}",
+      "appearance": "checkbox",
+      "help_text": "Enable to anonymize IP addresses in analytics.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "boolean",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "analytics_and_tracking.anonymize_ip"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Respect Do Not Track",
+      "slug": "respect_dnt",
+      "parent_id": "{{getAttributeGroup('print_versions', 'analytics_and_tracking', 'site-settings', 'blocks')}}",
+      "appearance": "checkbox",
+      "help_text": "Honor browser Do Not Track settings.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "boolean",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "analytics_and_tracking.respect_dnt"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Consent Banner Enabled",
+      "slug": "consent_banner_enabled",
+      "parent_id": "{{getAttributeGroup('print_versions', 'consent_policy', 'site-settings', 'blocks')}}",
+      "appearance": "checkbox",
+      "help_text": "Enables or disables display of the cookie\/consent banner.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "boolean",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "consent_policy.consent_banner_enabled"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "PWA Enabled",
+      "slug": "pwa_enabled",
+      "parent_id": "{{getAttributeGroup('print_versions', 'pwa', 'site-settings', 'blocks')}}",
+      "appearance": "checkbox",
+      "help_text": "Activates Progressive Web App features for the site.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "boolean",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "pwa.pwa_enabled"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Social Profiles",
+      "slug": "social_profiles",
+      "parent_id": "{{getAttributeGroup('print_versions', 'social_and_sharing', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^(http|https):\\\/\\\/[^ \\\/$.?#].[^\\s]*$\/"
+      },
+      "placeholder": "Facebook: https:\/\/...",
+      "help_text": "List of social profile URLs.",
+      "is_array": true,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "social_and_sharing.social_profiles"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Privacy Policy URL",
+      "slug": "privacy_policy_url",
+      "parent_id": "{{getAttributeGroup('print_versions', 'legal_and_compliance', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^(http|https):\\\/\\\/[^ \\\/$.?#].[^\\s]*$\/"
+      },
+      "placeholder": "https:\/\/...",
+      "help_text": "Link to privacy policy page.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "legal_and_compliance.privacy_policy_url"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Terms of Service URL",
+      "slug": "terms_url",
+      "parent_id": "{{getAttributeGroup('print_versions', 'legal_and_compliance', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^(http|https):\\\/\\\/[^ \\\/$.?#].[^\\s]*$\/"
+      },
+      "placeholder": "https:\/\/...",
+      "help_text": "Link to terms of service page.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "legal_and_compliance.terms_url"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Cookies Policy URL",
+      "slug": "cookies_policy_url",
+      "parent_id": "{{getAttributeGroup('print_versions', 'legal_and_compliance', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^(http|https):\\\/\\\/[^ \\\/$.?#].[^\\s]*$\/"
+      },
+      "placeholder": "https:\/\/...",
+      "help_text": "Link to cookies policy page.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "legal_and_compliance.cookies_policy_url"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Learn More URL",
+      "slug": "learn_more_url",
+      "parent_id": "{{getAttributeGroup('print_versions', 'consent_policy', 'site-settings', 'blocks')}}",
+      "appearance": "short",
+      "validations": {
+        "regular_expression": "\/^(http|https):\\\/\\\/[^ \\\/$.?#].[^\\s]*$\/"
+      },
+      "placeholder": "https:\/\/example.com\/privacy",
+      "help_text": "URL linking to more information on cookies and privacy.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "consent_policy.learn_more_url"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "PWA Display Mode",
+      "slug": "pwa_display_mode",
+      "parent_id": "{{getAttributeGroup('print_versions', 'pwa', 'site-settings', 'blocks')}}",
+      "appearance": "list",
+      "options": [
+        "standalone",
+        "minimal-ui",
+        "browser"
+      ],
+      "placeholder": "standalone",
+      "help_text": "Display mode: standalone, minimal-ui, or browser.",
+      "is_array": false,
+      "allow_facets": false,
+      "has_index": false,
+      "is_disabled": false,
+      "is_required": false,
+      "is_hidden": false,
+      "object_type": "print_versions",
+      "data_type": "text",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'site-settings')}}",
+      "template_type": "blocks",
+      "full_slug": "pwa.pwa_display_mode"
+    }
+  }
+]
+```

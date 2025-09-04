@@ -1,0 +1,89 @@
+---
+title: "Tags"
+description: "Tags used for the MintsCloud project"
+---
+
+# Tags
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This page documents the **tags** available for the MintsCloud project.
+
+---
+
+## 📋 Tags Hierarchy
+
+### Customer Journey
+
+- **Engagement**
+- **Autonomy**
+- **Customer Data**
+- **Content**
+- **Commerce**
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots or diagrams showing how tags are applied in CXF.
+
+---
+
+## 📦 JSON Seed
+
+```json expandable
+[
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Customer Journey",
+      "slug": "customer-journey",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Engagement",
+      "slug": "engagement",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'customer-journey')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Autonomy",
+      "slug": "autonomy",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'customer-journey')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Customer Data",
+      "slug": "customer-data",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'customer-journey')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Content",
+      "slug": "content",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'customer-journey')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Commerce",
+      "slug": "commerce",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'customer-journey')}}",
+      "visible": true
+    }
+  }
+]
+```

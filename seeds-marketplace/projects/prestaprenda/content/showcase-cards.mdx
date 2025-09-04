@@ -1,0 +1,1162 @@
+---
+title: PrestaPrenda · Showcase Cards Seeds
+description: Repository of all Showcase Cards content instances and print versions
+---
+
+# PrestaPrenda · Showcase Cards Seeds
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+This page exposes all **content seeds** (content_instances + print_versions) that use the **Showcase Cards** template for PrestaPrenda.  
+
+It is intended as a **copy-paste repository** for seeding multiple records.
+
+---
+
+## 📋 How to use
+
+- Each record consists of:
+  - A `content_instances` object
+  - Its related `print_versions` object
+- All records follow the **Showcase Cards template**.
+- You can paste multiple records into the array below.
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots or diagrams showing how Showcase Cards appear in CXF.
+
+---
+
+## 📦 JSON Seeds
+
+
+```json
+[
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Beneficios de comprar oro - Cards",
+      "slug": "beneficios-de-compar-oro-con-presta-prenda-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "compra"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'beneficios-de-compar-oro-con-presta-prenda-cards')}}",
+      "title": "Beneficios de comprar oro - Cards",
+      "slug": "beneficios-de-compar-oro-con-presta-prenda-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Oro verificado y autenticado por expertos"
+        },
+        {
+          "headline": "Precios Competitivos"
+        },
+        {
+          "headline": "Diversas Presentaciones: Joyas, Monedas, Lingotes"
+        },
+        {
+          "headline": "Venta Segura en Sucursales Seleccionadas"
+        },
+        {
+          "headline": "Ideal para inversión o uso personal"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Beneficios de Presta Prenda - Cards",
+      "slug": "beneficios-de-presta-prenda-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "centro-de-ayuda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'beneficios-de-presta-prenda-cards')}}",
+      "title": "Beneficios de Presta Prenda - Cards",
+      "slug": "beneficios-de-presta-prenda-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "1,200\nSucursales"
+        },
+        {
+          "headline": "Abierto todos los días del año"
+        },
+        {
+          "headline": "Horario de 9 am a 9 pm"
+        },
+        {
+          "headline": "Acceso a la\napp BAZ"
+        },
+        {
+          "headline": "Seguridad"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Beneficios Resguardo - Cards",
+      "slug": "beneficios-de-resguardar-tus-prendas-con-presta-prenda-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "resguarda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'beneficios-de-resguardar-tus-prendas-con-presta-prenda-cards')}}",
+      "title": "Beneficios Resguardo - Cards",
+      "slug": "beneficios-de-resguardar-tus-prendas-con-presta-prenda-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Custodia en bóveda segura."
+        },
+        {
+          "headline": "Sin intereses mientras decides."
+        },
+        {
+          "headline": "Protección ante imprevistos."
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Centro de atencion y ayuda - Cards",
+      "slug": "centros-de-atencion-y-ayuda-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "centro-de-ayuda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'centros-de-atencion-y-ayuda-cards')}}",
+      "title": "Centro de atencion y ayuda - Cards",
+      "slug": "centros-de-atencion-y-ayuda-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Preguntas Frecuentes",
+          "cta_action": "/centro-de-ayuda"
+        },
+        {
+          "headline": "Sucursales",
+          "cta_action": "/localizador-sucursales"
+        },
+        {
+          "headline": "Facebook",
+          "cta_action": "https://www.facebook.com/mxprestaprenda"
+        },
+        {
+          "headline": "Instagram",
+          "cta_action": "https://www.instagram.com/mxprestaprenda"
+        },
+        {
+          "headline": "Whatsapp"
+        },
+        {
+          "headline": "PrestaBot"
+        },
+        {
+          "headline": "Web Chat",
+          "cta_action": "/chat"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Compar Relojes Beneficios - Cards",
+      "slug": "compar-relojes-beneficios-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "relojes"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'compar-relojes-beneficios-cards')}}",
+      "title": "Compar Relojes Beneficios - Cards",
+      "slug": "compar-relojes-beneficios-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Compra 100% segura"
+        },
+        {
+          "headline": "Piezas únicas"
+        },
+        {
+          "headline": "Oro garantizado"
+        },
+        {
+          "headline": "100% originales"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Comprar Relojes Como Funciona - Cards",
+      "slug": "compar-relojes-como-funciona-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "relojes"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'compar-relojes-como-funciona-cards')}}",
+      "title": "Comprar Relojes Como Funciona - Cards",
+      "slug": "compar-relojes-como-funciona-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Elige la pieza que más te guste",
+          "body": "Contamos con una amplia variedad de relojes.\n\nRecibe atención personalizada de nuestro equipo: estamos aquí para ayudarte a elegir lo mejor para ti."
+        },
+        {
+          "headline": "Paga con la opción que más te convenga",
+          "body": "Aceptamos pagos en efectivo, por la aplicación celular, TPV, VAC 4 y VAC 13.\n\nTú eliges cómo pagar, siempre de forma fácil, rápida y segura."
+        },
+        {
+          "headline": "Recíbela de manos de nuestros expertos",
+          "body": "Tu compra estará respaldada por nuestro equipo especializado.\n\nDisfruta tu oro con la tranquilidad de recibirlo con garantía, autenticidad y el mejor servicio."
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "El respaldo de banco azteca - Cards",
+      "slug": "el-respaldo-de-banco-azteca-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "empena",
+        "vende",
+        "resguarda",
+        "compra",
+        "relojes",
+        "monedas-de-oro",
+        "laminas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'el-respaldo-de-banco-azteca-cards')}}",
+      "title": "El respaldo de banco azteca - Cards",
+      "slug": "el-respaldo-de-banco-azteca-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "cta_action": "https://play.google.com/store/apps/details?id=mx.com.bancoazteca.bazdigitalmovil"
+        },
+        {
+          "cta_action": "https://apps.apple.com/mx/app/banco-azteca/id1203433478"
+        },
+        {
+          "cta_action": "https://appgallery.huawei.com/app/C100427419"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Requisitios minimos empeño - Caards",
+      "slug": "empena-los-requisitos-son-minimos-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "empena"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'empena-los-requisitos-son-minimos-cards')}}",
+      "title": "Requisitios minimos empeño - Caards",
+      "slug": "empena-los-requisitos-son-minimos-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Ser mayor de edad"
+        },
+        {
+          "headline": "Identificación oficial vigente"
+        },
+        {
+          "headline": "Comprobante de domicilio"
+        },
+        {
+          "headline": "Llevar las prendas que deseas empeñar"
+        },
+        {
+          "headline": "Contar con una cuenta de BAZ*"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Empeñar Relojes Beneficios - Cards",
+      "slug": "empenar-relojes-beneficios-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "relojes"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'empenar-relojes-beneficios-cards')}}",
+      "title": "Empeñar Relojes Beneficios - Cards",
+      "slug": "empenar-relojes-beneficios-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Tú eliges",
+          "subheadline": "Entre monto, interés y tiempo"
+        },
+        {
+          "headline": "Fácil",
+          "subheadline": "Trámite sencillo"
+        },
+        {
+          "headline": "Rápido",
+          "subheadline": "Respuesta inmediata"
+        },
+        {
+          "headline": "Sin historial",
+          "subheadline": "No necesitas historial crediticio"
+        },
+        {
+          "headline": "Sin comprobantes",
+          "subheadline": "de ingreso"
+        },
+        {
+          "headline": "Sin aval",
+          "subheadline": "Sin necesidad de aval"
+        },
+        {
+          "headline": "Abiertos los 365 días",
+          "subheadline": "En un amplio horario"
+        },
+        {
+          "headline": "Refrendos ilimitados"
+        },
+        {
+          "headline": "Abonos a capital",
+          "subheadline": "Desde $1, cuando tú quieras"
+        },
+        {
+          "headline": "Todas tus operaciones desde la app"
+        },
+        {
+          "headline": "Prendas 100% seguras"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Empeñar Relojes Como Funciona - Cards",
+      "slug": "empenar-relojes-como-funciona-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "relojes"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'empenar-relojes-como-funciona-cards')}}",
+      "title": "Empeñar Relojes Como Funciona - Cards",
+      "slug": "empenar-relojes-como-funciona-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Lleva tu reloj original a Presta Prenda",
+          "subheadline": "Único requisito INE",
+          "body": "*Se deberá presentar un comprobante de domicilio en el caso de que el domicilio actual, no coincida con el INE"
+        },
+        {
+          "headline": "Un experto lo valuará y te ofrecerá lo justo",
+          "subheadline": "Recibe atención perzonalizada, estamos para apoyarte",
+          "body": "*El reloj debe ser original, estar en buen estado, y no ser de oro o digital"
+        },
+        {
+          "headline": "Recibe tu dinero de inmediato en efectivo.\nConveniencia / seguridad.",
+          "subheadline": "Efectivo para que lo uses en cualquier lugar"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Empeño - Cards",
+      "slug": "empeno-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "centro-de-ayuda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'empeno-cards')}}",
+      "title": "Empeño - Cards",
+      "slug": "empeno-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Joyería",
+          "body": "*legales 1"
+        },
+        {
+          "headline": "Relojes",
+          "body": "*legales 2"
+        },
+        {
+          "headline": "Monedas de oro",
+          "body": "*legales 3"
+        },
+        {
+          "headline": "Plata",
+          "body": "*legales 4"
+        },
+        {
+          "headline": "Láminas de oro",
+          "body": "*legales 5"
+        },
+        {
+          "headline": "Automóviles",
+          "body": "*legales 6"
+        },
+        {
+          "headline": "Inmuebles",
+          "body": "*legales 7"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Servicios Principales - Cards",
+      "slug": "expertos-en-darle-mas-valor-a-tus-prendas-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "home"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'expertos-en-darle-mas-valor-a-tus-prendas-cards')}}",
+      "title": "Servicios Principales - Cards",
+      "slug": "expertos-en-darle-mas-valor-a-tus-prendas-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Empeña",
+          "cta_action": "/empena",
+          "cta_style": "inline"
+        },
+        {
+          "headline": "Vende",
+          "cta_action": "/vende",
+          "cta_style": "inline"
+        },
+        {
+          "headline": "Resguarda",
+          "cta_action": "/resguarda",
+          "cta_style": "inline"
+        },
+        {
+          "headline": "Compra",
+          "cta_action": "/compra",
+          "cta_style": "inline"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Laminas de oro Beneficios - Cards",
+      "slug": "laminas-de-oro-beneficios-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "laminas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'laminas-de-oro-beneficios-cards')}}",
+      "title": "Laminas de oro Beneficios - Cards",
+      "slug": "laminas-de-oro-beneficios-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Único en México"
+        },
+        {
+          "headline": "Calidad y seguridad"
+        },
+        {
+          "headline": "Hecho en Suiza"
+        },
+        {
+          "headline": "Pureza de .9999"
+        },
+        {
+          "headline": "Certificado digital"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Laminas de oro Tamaños - Cards",
+      "slug": "laminas-de-oro-tamanos-disponibles-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "laminas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'laminas-de-oro-tamanos-disponibles-cards')}}",
+      "title": "Laminas de oro Tamaños - Cards",
+      "slug": "laminas-de-oro-tamanos-disponibles-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "1 kg"
+        },
+        {
+          "headline": "100 g"
+        },
+        {
+          "headline": "50 g"
+        },
+        {
+          "headline": "5 g"
+        },
+        {
+          "headline": "2.5 g"
+        },
+        {
+          "headline": "1 g"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Monedas de oro Azteca - Cards",
+      "slug": "monedas-de-oro-azteca-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "monedas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'monedas-de-oro-azteca-cards')}}",
+      "title": "Monedas de oro Azteca - Cards",
+      "slug": "monedas-de-oro-azteca-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {},
+        {}
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Monedas de oro Beneficios - Cards",
+      "slug": "monedas-de-oro-beneficios-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "monedas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'monedas-de-oro-beneficios-cards')}}",
+      "title": "Monedas de oro Beneficios - Cards",
+      "slug": "monedas-de-oro-beneficios-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Calidad y seguridad"
+        },
+        {
+          "headline": "Hechas por el Banco de México"
+        },
+        {
+          "headline": "Oro Puro"
+        },
+        {
+          "headline": "Pieza conmemorativa"
+        },
+        {
+          "headline": "Valor histórico"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Monedas de oro Centenario - Cards",
+      "slug": "monedas-de-oro-centenario-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "monedas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'monedas-de-oro-centenario-cards')}}",
+      "title": "Monedas de oro Centenario - Cards",
+      "slug": "monedas-de-oro-centenario-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {},
+        {}
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Monedas de oro Hidalgo - Cards",
+      "slug": "monedas-de-oro-hidalgo-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "monedas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'monedas-de-oro-hidalgo-cards')}}",
+      "title": "Monedas de oro Hidalgo - Cards",
+      "slug": "monedas-de-oro-hidalgo-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Hidalgo",
+          "subheadline": "$10 pesos oro"
+        },
+        {
+          "headline": "1/2 Hidalgo",
+          "subheadline": "$5 pesos oro"
+        },
+        {
+          "headline": "1/4 Hidalgo",
+          "subheadline": "$2.5 pesos oro"
+        },
+        {
+          "headline": "1/5 Hidalgo",
+          "subheadline": "$2 pesos oro"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Movilidad, Alcanza tus metas - Cards",
+      "slug": "movilidad-alcanza-tus-metas-al-empenar-tu-auto-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "movilidad"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'movilidad-alcanza-tus-metas-al-empenar-tu-auto-cards')}}",
+      "title": "Movilidad, Alcanza tus metas - Cards",
+      "slug": "movilidad-alcanza-tus-metas-al-empenar-tu-auto-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "LOGRA TU PROYECTO PERSONAL O FAMILIAR"
+        },
+        {
+          "headline": "RESUELVE ALGÚN IMPREVISTO SIN PREOCUPARTE"
+        },
+        {
+          "headline": "DALE UN RESPIRO A TUS FINANZAS"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Movilidad, Solicitar tu prestamo - Cards",
+      "slug": "movilidad-solicitar-tu-prestamo-con-nosotros-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "movilidad"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'movilidad-solicitar-tu-prestamo-con-nosotros-cards')}}",
+      "title": "Movilidad, Solicitar tu prestamo - Cards",
+      "slug": "movilidad-solicitar-tu-prestamo-con-nosotros-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Dinos qué auto tienes"
+        },
+        {
+          "headline": "Conoce cuánto te ofrecemos"
+        },
+        {
+          "headline": "Programa una revisión de tu vehículo"
+        },
+        {
+          "headline": "Obtén tu préstamo"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Que puedes comprar - Cards",
+      "slug": "que-puedes-comprar-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "compra"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'que-puedes-comprar-cards')}}",
+      "title": "Que puedes comprar - Cards",
+      "slug": "que-puedes-comprar-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Joyería",
+          "cta_label": "Ver catálogo",
+          "cta_action": "/localizador-sucursales",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Monedas",
+          "cta_label": "Ver catálogo",
+          "cta_action": "/localizador-sucursales",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Láminas de oro",
+          "cta_label": "Ver catálogo",
+          "cta_action": "/localizador-sucursales",
+          "cta_style": "anchor-icon-right"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Que puedes empeñar - Cards",
+      "slug": "que-puedes-empenar-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "empena"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'que-puedes-empenar-cards')}}",
+      "title": "Que puedes empeñar - Cards",
+      "slug": "que-puedes-empenar-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Joyería",
+          "cta_label": "Cotizar",
+          "cta_action": "/valuador/empena",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Relojes",
+          "cta_label": "Cotizar",
+          "cta_action": "/valuador/empena",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Monedas",
+          "cta_label": "Cotizar",
+          "cta_action": "/valuador/empena",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Láminas de oro",
+          "cta_label": "Cotizar",
+          "cta_action": "/valuador/empena",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Automóviles",
+          "cta_label": "Cotizar",
+          "cta_action": "/valuador/empena",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Inmuebles",
+          "cta_label": "Proximamente"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Que puedes resguardar - Cards",
+      "slug": "que-puedes-resguardar-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "resguarda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'que-puedes-resguardar-cards')}}",
+      "title": "Que puedes resguardar - Cards",
+      "slug": "que-puedes-resguardar-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Joyería",
+          "cta_label": "Cotizar",
+          "cta_action": "/valuador/resguarda",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Relojes",
+          "cta_label": "Cotizar",
+          "cta_action": "/valuador/resguarda",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Monedas",
+          "cta_label": "Cotizar",
+          "cta_action": "/valuador/resguarda",
+          "cta_style": "anchor-icon-right"
+        },
+        {
+          "headline": "Láminas de oro",
+          "cta_label": "Cotizar",
+          "cta_action": "/valuador/resguarda",
+          "cta_style": "anchor-icon-right"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Servicios de Expertos en Oro - Cards",
+      "slug": "servicios-de-expertos-en-oro-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "centro-de-ayuda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'servicios-de-expertos-en-oro-cards')}}",
+      "title": "Servicios de Expertos en Oro - Cards",
+      "slug": "servicios-de-expertos-en-oro-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Compra de prendas de oro",
+          "cta_action": "/sucursal/<slug de sucursal>/catalogo"
+        },
+        {
+          "headline": "Venta de prendas de oro",
+          "cta_action": "/vende"
+        },
+        {
+          "headline": "Catálogo Exclusivo Black",
+          "cta_action": "/catalogo"
+        },
+        {
+          "headline": "Venta de láminas de oro",
+          "cta_action": "/laminas-de-oro"
+        },
+        {
+          "headline": "Resguardo de prendas de oro",
+          "cta_action": "/resguarda"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Siguenos y Mantente Informado - Cards",
+      "slug": "siguenos-y-mantente-informado-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "centro-de-ayuda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'siguenos-y-mantente-informado-cards')}}",
+      "title": "Siguenos y Mantente Informado - Cards",
+      "slug": "siguenos-y-mantente-informado-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "cta_label": "@Presta Prenda Oficial",
+          "cta_action": "https://www.facebook.com/mxprestaprenda"
+        },
+        {
+          "cta_label": "@mxprestaprenda",
+          "cta_action": "https://www.instagram.com/mxprestaprenda"
+        }
+      ]
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Vende como funciona - Cards",
+      "slug": "vende-como-funciona-cards",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "tags": [
+        "vende"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'vende-como-funciona-cards')}}",
+      "title": "Vende como funciona - Cards",
+      "slug": "vende-como-funciona-cards",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "cards": [
+        {
+          "headline": "Lleva tu prenda a Presta Prenda"
+        },
+        {
+          "headline": "Un experto hará una valuación y te presentará una oferta justa y competitiva"
+        },
+        {
+          "headline": "Acepta la oferta y recibe tu dinero de inmediato"
+        }
+      ]
+    }
+  }
+]

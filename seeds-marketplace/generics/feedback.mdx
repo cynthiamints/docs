@@ -1,0 +1,192 @@
+---
+title: "Feedback"
+description: "Define a feedback/review block with body, rating, date, and author details"
+---
+
+# Feedback
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This seed defines a **Feedback** block in CXF, including the review body, rating, date, and author information.
+
+---
+
+## 📋 Fields
+
+| Group   | Field       | Slug             | Data Type | Appearance     | Is Array | Required | Hidden | Placeholder              | Help Text                                             | Recommended Validations |
+| ------- | ----------- | ---------------- | --------- | -------------- | -------- | -------- | ------ | ------------------------ | ----------------------------------------------------- | ----------------------- |
+| Default | **Body**    | `body`           | Text      | Full Formatted | FALSE    | FALSE    | FALSE  | This product is amazing… | The main body/content of the feedback or review.      | –                       |
+| Default | **Rating**  | `rating`         | Number    | Rating Stars   | FALSE    | FALSE    | FALSE  | –                        | Star rating (e.g., 1–5) given by the feedback author. | –                       |
+| Default | **Date**    | `date`           | Date      | Date           | FALSE    | FALSE    | FALSE  | YYYY-MM-DD               | The date the feedback was submitted or published.     | –                       |
+| Author  | **Name**    | `author.name`    | Text      | Short          | FALSE    | FALSE    | FALSE  | John Doe                 | Name of the person who provided the feedback.         | Min 0; Max 50           |
+| Author  | **Caption** | `author.caption` | Text      | Short          | FALSE    | FALSE    | FALSE  | CEO, Example Co.         | A short description or title for the author.          | Min 0; Max 50           |
+| Author  | **Avatar**  | `author.avatar`  | Media     | Image          | FALSE    | FALSE    | FALSE  | Upload author avatar     | Profile picture or avatar of the feedback author.     | –                       |
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples.
+
+---
+
+## 📦 JSON Seed
+
+```json expandable
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Feedback",
+      "slug": "feedback",
+      "type": "blocks",
+      "default_tags_ids": ["v1"]
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Body",
+      "slug": "body",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "This product is amazing...",
+      "help_text": "The main body/content of the feedback or review.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'feedback')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "body"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Rating",
+      "slug": "rating",
+      "data_type": "number",
+      "appearance": "rating_stars",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "help_text": "Star rating (e.g., 1-5) given by the feedback author.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'feedback')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "rating"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Date",
+      "slug": "date",
+      "data_type": "date",
+      "appearance": "date",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "YYYY-MM-DD",
+      "help_text": "The date the feedback was submitted or published.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'feedback')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "date"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Author",
+      "slug": "author",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'feedback')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "author"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Name",
+      "slug": "name",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "John Doe",
+      "help_text": "Name of the person who provided the feedback.",
+      "parent_id": "{{getAttributeGroup('print_versions', 'author', 'feedback', 'blocks')}}",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'feedback')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "author.name",
+      "validations": {
+        "min": 0,
+        "max": 50
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Caption",
+      "slug": "caption",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "CEO, Example Co.",
+      "help_text": "A short description or title for the author.",
+      "parent_id": "{{getAttributeGroup('print_versions', 'author', 'feedback', 'blocks')}}",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'feedback')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "author.caption",
+      "validations": {
+        "min": 0,
+        "max": 50
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Avatar",
+      "slug": "avatar",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Upload author avatar",
+      "help_text": "Profile picture or avatar of the feedback author.",
+      "parent_id": "{{getAttributeGroup('print_versions', 'author', 'feedback', 'blocks')}}",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'feedback')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "author.avatar"
+    }
+  }
+]
+```

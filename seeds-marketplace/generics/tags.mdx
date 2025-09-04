@@ -1,0 +1,47 @@
+---
+title: Tags
+description: Tags used for the Generics seeds
+---
+
+# Tags
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+This page documents the **tags** available for the Generics seeds.
+
+---
+
+## 📋 Tags Hierarchy
+
+### Version
+- **v1**
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots or diagrams showing how tags are applied in CXF.
+
+---
+
+## 📦 JSON Seed
+
+```json
+[
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Version",
+      "slug": "version",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "v1",
+      "slug": "v1",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'version')}}",
+      "visible": true
+    }
+  }
+]

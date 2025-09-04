@@ -1,0 +1,232 @@
+---
+title: "Blog"
+description: "Define a blog post template with metadata, content, and author details"
+---
+
+# Blog
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This seed defines a **Blog** template in CXF, including title, body, blurb, metadata, cover image, and author details.
+
+---
+
+## 📋 Blog Fields
+
+| Group   | Field              | Slug             | Data Type | Appearance       | Is Array | Required | Hidden | Placeholder | Help Text                    | Recommended Validations |
+| ------- | ------------------ | ---------------- | --------- | ---------------- | -------- | -------- | ------ | ----------- | ---------------------------- | ----------------------- |
+| Default | **Title**          | `title`          | Text      | Short            | FALSE    | FALSE    | FALSE  | –           | Blog post title.             | –                       |
+| Default | **Body**           | `body`           | Text      | Full Formatted   | FALSE    | FALSE    | FALSE  | –           | Main blog content.           | –                       |
+| Default | **Blurb**          | `blurb`          | Text      | Simple Formatted | FALSE    | FALSE    | FALSE  | –           | Short summary or teaser.     | –                       |
+| Default | **Lecture Time**   | `lecture_time`   | Text      | Short            | FALSE    | FALSE    | FALSE  | –           | Estimated reading time.      | –                       |
+| Default | **Published Date** | `published_date` | Date      | Date             | FALSE    | FALSE    | FALSE  | –           | Date the blog was published. | –                       |
+| Default | **Cover Image**    | `cover_image`    | Media     | Image            | FALSE    | TRUE     | FALSE  | –           | Featured image for the blog. | Required                |
+
+---
+
+## 📋 Blog Author Fields
+
+| Group   | Field              | Slug             | Data Type | Appearance | Is Array | Required | Hidden | Placeholder      | Help Text                                  | Recommended Validations |
+| ------- | ------------------ | ---------------- | --------- | ---------- | -------- | -------- | ------ | ---------------- | ------------------------------------------ | ----------------------- |
+| Default | **Author Name**    | `author_name`    | Text      | Short      | FALSE    | FALSE    | FALSE  | John Doe         | Name of the blog author.                   | Max length 50           |
+| Default | **Author Caption** | `author_caption` | Text      | Short      | FALSE    | FALSE    | FALSE  | CEO, Example Co. | Short description or title for the author. | Max length 50           |
+| Default | **Author Avatar**  | `author_avatar`  | Media     | Image      | FALSE    | FALSE    | FALSE  | Upload avatar    | Profile picture of the author.             | Square aspect ratio     |
+| Default | **Author Bio**     | `author_bio`     | Text      | Long       | FALSE    | FALSE    | FALSE  | –                | Longer biography of the author.            | –                       |
+
+---
+
+## 🔗 Relationships
+
+- **Blogs ↔ Blog Authors**
+  - A blog can have **many authors**.
+  - An author can be linked to **many blogs**.
+  - This is a **many-to-many relationship**.
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples.
+
+---
+
+## 📦 JSON Seed
+
+```json expandable
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Blog",
+      "slug": "blog",
+      "type": "stories"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Lecture time",
+      "slug": "lecture_time",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'blog')}}",
+      "object_type": "print_versions",
+      "template_type": "stories",
+      "full_slug": "lecture_time"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Published date",
+      "slug": "published_date",
+      "data_type": "date",
+      "appearance": "date",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'blog')}}",
+      "object_type": "print_versions",
+      "template_type": "stories",
+      "full_slug": "published_date"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Cover Image",
+      "slug": "cover_image",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'blog')}}",
+      "object_type": "print_versions",
+      "template_type": "stories",
+      "full_slug": "cover_image"
+    }
+  },
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Blog Author",
+      "slug": "blog-author",
+      "type": "stories"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Author Name",
+      "slug": "author_name",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "John Doe",
+      "help_text": "Name of the person who provided the feedback.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'blog-author')}}",
+      "object_type": "print_versions",
+      "template_type": "stories",
+      "full_slug": "author_name",
+      "validations": {
+        "max": 50
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Author Caption",
+      "slug": "author_caption",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "CEO, Example Co.",
+      "help_text": "A short description or title for the author.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'blog-author')}}",
+      "object_type": "print_versions",
+      "template_type": "stories",
+      "full_slug": "author_caption",
+      "validations": {
+        "max": 50
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Author Avatar",
+      "slug": "author_avatar",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Upload author avatar",
+      "help_text": "Profile picture or avatar of the feedback author.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'blog-author')}}",
+      "object_type": "print_versions",
+      "template_type": "stories",
+      "full_slug": "author_avatar",
+      "validations": {
+        "aspect_ratio": "square"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Author Bio",
+      "slug": "author_bio",
+      "data_type": "text",
+      "appearance": "long",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'blog-author')}}",
+      "object_type": "print_versions",
+      "template_type": "stories",
+      "full_slug": "author_bio"
+    }
+  },
+  {
+    "object_type": "relationships",
+    "data": {
+      "title_1": "Blogs",
+      "alias_1": "blogs",
+      "object_type_1": "content_instances",
+      "cardinality_1": "many",
+      "title_2": "Blog Authors",
+      "alias_2": "blog-authors",
+      "object_type_2": "content_instances",
+      "cardinality_2": "many",
+      "template_id_1": "{{getRecordAttribute('content_templates', 'slug', 'blog')}}",
+      "template_id_2": "{{getRecordAttribute('content_templates', 'slug', 'blog-author')}}",
+      "type_1": "stories",
+      "type_2": "stories",
+      "pivot_fields_config": []
+    }
+  }
+]
+```

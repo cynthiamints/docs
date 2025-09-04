@@ -8,6 +8,9 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
+  "auth": {
+    "routes": ["/seeds-marketplace/projects/*"]
+  },
   "navigation": {
     "tabs": [
       {
@@ -50,6 +53,72 @@
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete",
               "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Seeds Marketplace",
+        "groups": [
+          {
+            "group": "Generics",
+            "pages": [
+              "seeds-marketplace/generics/tags",
+              "seeds-marketplace/generics/site-settings",
+              "seeds-marketplace/generics/page-meta",
+              "seeds-marketplace/generics/section-headline",
+              "seeds-marketplace/generics/page-block",
+              "seeds-marketplace/generics/showcase-cards",
+              "seeds-marketplace/generics/blog",
+              "seeds-marketplace/generics/faqs",
+              "seeds-marketplace/generics/feedback",
+              "seeds-marketplace/generics/store-branch",
+              "seeds-marketplace/generics/bot-menu"
+            ]
+          },
+          {
+            "group": "Projects",
+            "pages": [
+              {
+                "group": "Presta Prenda",
+                "pages": [
+                  {
+                    "group": "Structure",
+                    "pages": [
+                      "seeds-marketplace/projects/prestaprenda/structure/tags",
+                      "seeds-marketplace/projects/prestaprenda/structure/store-branch",
+                      "seeds-marketplace/projects/prestaprenda/structure/products"
+                    ]
+                  },
+                  {
+                    "group": "Content",
+                    "pages": [
+                      "seeds-marketplace/projects/prestaprenda/content/page-meta",
+                      "seeds-marketplace/projects/prestaprenda/content/section-headline",
+                      "seeds-marketplace/projects/prestaprenda/content/page-block",
+                      "seeds-marketplace/projects/prestaprenda/content/showcase-cards"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Mints Cloud",
+                "pages": [
+                  {
+                    "group": "Structure",
+                    "pages": [
+                      "seeds-marketplace/projects/mintscloud/structure/tags",
+                      "seeds-marketplace/projects/mintscloud/structure/success-story"
+                    ]
+                  },
+                  {
+                    "group": "Content",
+                    "pages": [
+                      
+                    ]
+                  }
+                ]
+              }
             ]
           }
         ]

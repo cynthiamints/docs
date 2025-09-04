@@ -1,0 +1,253 @@
+---
+title: "Showcase Cards"
+description: "Define a collection of showcase cards with headlines, images, and CTAs"
+---
+
+# Showcase Cards
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This seed defines a collection of showcase cards in CXF, each with a headline, subheadline, image, and optional call-to-action (CTA).
+
+---
+
+## 📋 Fields
+
+| Group | Field                   | Slug                  | Data Type | Appearance | Is Array | Has Index | Allow Facets | Required | Hidden | List Options                                                                             | Placeholder               | Help Text                                         | Recommended Validations            |
+| ----- | ----------------------- | --------------------- | --------- | ---------- | -------- | --------- | ------------ | -------- | ------ | ---------------------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------- | ---------------------------------- |
+| –     | **Cards**               | `cards`               | Group     | Default    | TRUE     | –         | –            | –        | –      | –                                                                                        | –                         | Collection of individual showcase cards.          | Min 1 card                         |
+| Cards | **Headline**            | `headline`            | Text      | Short      | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                        | Card Headline             | Main heading for the card content.                | –                                  |
+| Cards | **Subheadline**         | `subheadline`         | Text      | Long       | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                        | Supporting text...        | Secondary text or brief summary for the card.     | –                                  |
+| Cards | **Image**               | `image`               | Media     | Image      | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                        | Upload card image         | Primary image for the card.                       | –                                  |
+| Cards | **Image Alt**           | `image_alt`           | Text      | Short      | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                        | Description of card image | Alt text for the card image.                      | Max length 120                     |
+| Cards | **CTA Supporting Copy** | `cta_supporting_copy` | Text      | Short      | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                        | (Optional)                | Short text preceding the CTA, adding context.     | –                                  |
+| Cards | **CTA Label**           | `cta_label`           | Text      | Short      | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                        | View Details              | Text displayed on the Call to Action button/link. | Max length 50                      |
+| Cards | **CTA Action**          | `cta_action`          | Text      | Short      | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                        | /product/id or #anchor    | URL or action triggered when the CTA is clicked.  | Must be valid URL or internal path |
+| Cards | **CTA Style**           | `cta_style`           | Text      | List       | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | button, button-icon-right, button-icon-left, anchor, anchor-icon-right, anchor-icon-left | button                    | Visual style of the Call to Action button/link.   | –                                  |
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples.
+
+---
+
+## 📦 JSON Seed
+
+```json expandable
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Showcase Cards",
+      "slug": "showcase-cards",
+      "type": "blocks",
+      "default_tags_ids": ["v1"]
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Cards",
+      "slug": "cards",
+      "data_type": "group",
+      "appearance": "default",
+      "is_array": true,
+      "is_disabled": false,
+      "is_hidden": false,
+      "help_text": "Collection of individual showcase cards.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cards"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Headline",
+      "slug": "headline",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cards', 'showcase-cards', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Card Headline",
+      "help_text": "Main heading for the card content.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cards.headline"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Subheadline",
+      "slug": "subheadline",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cards', 'showcase-cards', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Supporting text...",
+      "help_text": "Secondary text or brief summary for the card.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cards.subheadline"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Image",
+      "slug": "image",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cards', 'showcase-cards', 'blocks')}}",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Upload card image",
+      "help_text": "Primary image for the card.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cards.image"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Image Alt",
+      "slug": "image_alt",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cards', 'showcase-cards', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Description of card image",
+      "help_text": "Alt text for the card image.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cards.image_alt",
+      "validations": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "CTA Supporting Copy",
+      "slug": "cta_supporting_copy",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cards', 'showcase-cards', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "(Optional)",
+      "help_text": "Short text preceding the CTA, adding context.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cards.cta_supporting_copy"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "CTA Label",
+      "slug": "cta_label",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cards', 'showcase-cards', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "View Details",
+      "help_text": "Text displayed on the Call to Action button/link.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cards.cta_label",
+      "validations": {
+        "min": 0,
+        "max": 50
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "CTA Action",
+      "slug": "cta_action",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cards', 'showcase-cards', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "/product/id or #anchor",
+      "help_text": "URL or action triggered when the CTA is clicked.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cards.cta_action",
+      "validations": {
+        "regular_expression": "/^(http|https):\\/\\/[^ \\/$.?#].[^\\s]*$|^#.+|^\\/[^\\s]*$/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "CTA Style",
+      "slug": "cta_style",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cards', 'showcase-cards', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "button",
+        "button-icon-right",
+        "button-icon-left",
+        "anchor",
+        "anchor-icon-right",
+        "anchor-icon-left"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "button",
+      "help_text": "Visual style of the Call to Action button/link.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'showcase-cards')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cards.cta_style"
+    }
+  }
+]
+```

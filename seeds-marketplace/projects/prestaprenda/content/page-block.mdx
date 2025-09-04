@@ -1,0 +1,1602 @@
+---
+title: "PrestaPrenda · Page Block Seeds"
+description: "Repository of all Page Block content instances and print versions"
+---
+
+# PrestaPrenda · Page Block Seeds
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This page exposes all **content seeds** (content_instances \+ print_versions) that use the **Page Block** template for PrestaPrenda.
+
+It is intended as a **copy-paste repository** for seeding multiple records.
+
+---
+
+## 📋 How to use
+
+- Each record consists of:
+  - A `content_instances` object
+  - Its related `print_versions` object
+- All records follow the **Page Block template**.
+- You can paste multiple records into the array below.
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots or diagrams showing how Page Blocks appear in CXF.
+
+---
+
+## 📦 JSON Seeds
+
+```json expandable
+[
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Tus prendas tienen el poder de ayudarte.",
+      "slug": "tus-prendas-tienen-el-poder-de-ayudarte",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "home"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'tus-prendas-tienen-el-poder-de-ayudarte')}}",
+      "title": "Tus prendas tienen el poder de ayudarte.",
+      "slug": "tus-prendas-tienen-el-poder-de-ayudarte",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Tus prendas tienen el poder de ayudarte.",
+        "subheadline": "Obtén un prestamo facil y seguro dejandolas en garantia.",
+        "page_block_style": "hero"
+      },
+      "cta": {
+        "supporting_copy": "Transforma tus prendas en soluciones",
+        "label": "Comienza aqui",
+        "action": "/comienza-aqui",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Tus prendas valen mas de lo que te imaginas",
+      "slug": "tus-prendas-valen-mas-de-lo-que-te-imaginas",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "home"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'tus-prendas-valen-mas-de-lo-que-te-imaginas')}}",
+      "title": "Tus prendas valen mas de lo que te imaginas",
+      "slug": "tus-prendas-valen-mas-de-lo-que-te-imaginas",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Tus prendas valen mas de lo que te imaginas",
+        "body": "Además de obtener un préstamo, puedes venderlo al mejor precio, resguardarlo de forma segura o encontrar piezas únicas.",
+        "page_block_style": "text-left"
+      },
+      "cta": {
+        "supporting_copy": "Acude a una de nuestras más de 1,200 sucursales y comienza a ganar más por tus prendas.",
+        "label": "Encuentra tu sucursal",
+        "action": "/localizador-sucursales",
+        "style": "button-icon-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Aprende a tomar decisiones financieras inteligentes",
+      "slug": "aprende-a-tomar-decisiones-financieras-inteligentes",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "home"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'aprende-a-tomar-decisiones-financieras-inteligentes')}}",
+      "title": "Aprende a tomar decisiones financieras inteligentes",
+      "slug": "aprende-a-tomar-decisiones-financieras-inteligentes",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Aprende a tomar decisiones financieras inteligentes",
+        "body": "Descubre consejos prácticos, herramientas y contenido exclusivo que te ayudarán a elegir la mejor opción de crédito para tus necesidades. Toma el control de tus finanzas.",
+        "page_block_style": "foreground-left"
+      },
+      "cta": {
+        "label": "Recibe consejos financieros",
+        "action": "/boletin",
+        "style": "button-icon-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Recibe efectivo inmediato sin perder lo que es tuyo con la mejor valuación y sin complicaciones.",
+      "slug": "recibe-efectivo-inmediato-sin-perder-lo-que-es-tuyo",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "empena"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'recibe-efectivo-inmediato-sin-perder-lo-que-es-tuyo')}}",
+      "title": "Recibe efectivo inmediato sin perder lo que es tuyo con la mejor valuación y sin complicaciones.",
+      "slug": "recibe-efectivo-inmediato-sin-perder-lo-que-es-tuyo",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Recibe efectivo\ninmediato sin perder\nlo que es tuyo con la\nmejor valuación y sin\ncomplicaciones.",
+        "page_block_style": "hero"
+      },
+      "cta": {
+        "supporting_copy": "Tus prendas valen más de lo que imaginas.",
+        "label": "Calcula el valor de tus prendas",
+        "action": "/valuador/empena",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Empeñar es sencillo, rapido y seguro",
+      "slug": "empenar-es-sencillo-rapido-y-seguro",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "empena"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'empenar-es-sencillo-rapido-y-seguro')}}",
+      "title": "Empeñar es sencillo, rapido y seguro",
+      "slug": "empenar-es-sencillo-rapido-y-seguro",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Empeñar es sencillo,\nrapido y seguro",
+        "body": "Los créditos prendarios, o empeños, son la solución de millones de personas para obtener dinero inmediato, seguro y sin necesidad de avales ni trámites complicados.\n\nEn Presta Prenda somos expertos en en darle mas valor a tus prendas. Sabemos cómo valuar tus prendas de manera justa para ofrecerte el mejor valor y que aproveches al máximo tu garantía.",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Empeña - Los requisitos son minimos",
+      "slug": "empena-los-requisitos-son-minimos",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "empena"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'empena-los-requisitos-son-minimos')}}",
+      "title": "Empeña - Los requisitos son minimos",
+      "slug": "empena-los-requisitos-son-minimos",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Los requisitos son minimos",
+        "body": "*Aplica solo en préstamos mayores a $10,000 pesos. *Obligatorio en empeño de autos.",
+        "page_block_style": "text-center"
+      },
+      "cta": {
+        "supporting_copy": "Acude a una de nuestras más de 1,200 sucursales y\ncomienza a ganar más por tus prendas.",
+        "label": "Encuentra tu sucursal",
+        "action": "/localizador-sucursales",
+        "style": "button-icon-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Por que empeñar en Presta Prenda",
+      "slug": "por-que-empenar-en-presta-prenda",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "empena"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'por-que-empenar-en-presta-prenda')}}",
+      "title": "Por que empeñar en Presta Prenda",
+      "slug": "por-que-empenar-en-presta-prenda",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Por que empeñar en Presta Prenda",
+        "body": "Empeñar en Presta Prenda es rápido, seguro y sin complicaciones. Descubre las ventajas que hacen que nuestro servicio sea la mejor opción para ti:\n\n- Más de 1,100 sucursales en todo el país\n- Abierto todos los días del año\n- Atención en un amplio horario\n- Acceso a la App de Banco Azteca en cualquier momento",
+        "page_block_style": "foreground-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Empeña - Flexibilidad que se adapta a ti",
+      "slug": "empena-flexibilidad-que-se-adapta-a-ti",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "empena"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'empena-flexibilidad-que-se-adapta-a-ti')}}",
+      "title": "Empeña - Flexibilidad que se adapta a ti",
+      "slug": "empena-flexibilidad-que-se-adapta-a-ti",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Flexibilidad que se adapta a ti",
+        "body": "En Presta Prenda, tú tienes el control. Ajusta tu préstamo según tus necesidades y obtén la tranquilidad de contar con opciones que te brindan mayor comodidad.\n\n- Tú eliges el monto, interés y plazo\n- Todos los refrendos que necesites",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Empeña - Seguridad y rapidez en cada paso",
+      "slug": "empena-seguridad-y-rapidez-en-cada-paso",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "empena"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'empena-seguridad-y-rapidez-en-cada-paso')}}",
+      "title": "Empeña - Seguridad y rapidez en cada paso",
+      "slug": "empena-seguridad-y-rapidez-en-cada-paso",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Seguridad y rapidez en cada paso",
+        "body": "Tu tranquilidad es lo más importante. Nuestro proceso asegura que tus prendas estén protegidas.\n\n- Resguardo de prendas 100% seguro\n- Respuesta inmediata\n- Trámite sencillo, sin historial crediticio, sin comprobante de ingreso y sin aval\n- Cámaras de vigilancia",
+        "page_block_style": "foreground-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Compramos tus prendas a un precio justo y competitivo",
+      "slug": "compramos-tus-prendas-a-un-precio-justo-y-competitivo",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "vende"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'compramos-tus-prendas-a-un-precio-justo-y-competitivo')}}",
+      "title": "Compramos tus prendas a un precio justo y competitivo",
+      "slug": "compramos-tus-prendas-a-un-precio-justo-y-competitivo",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Compramos tus prendas\na un precio justo y\ncompetitivo.",
+        "page_block_style": "hero"
+      },
+      "cta": {
+        "label": "Conoce el valor de tus prendas",
+        "action": "/valuador/venta",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Te damos dinero al instante por tus prendas.",
+      "slug": "te-damos-dinero-al-instante-por-tus-prendas",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "vende"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'te-damos-dinero-al-instante-por-tus-prendas')}}",
+      "title": "Te damos dinero al instante por tus prendas.",
+      "slug": "te-damos-dinero-al-instante-por-tus-prendas",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Te damos dinero al instante por tus prendas.",
+        "body": "¿Tienes joyas, monedas o relojes de oro? En Presta Prenda te damos efectivo inmediato por tus prendas con un proceso fácil, seguro y sin complicaciones.\n\nO mejor aún: si no quieres desprenderte de ellas, puedes obtener un préstamo justo al momento y conservar tus artículos como garantía.",
+        "page_block_style": "foreground-right"
+      },
+      "cta": {
+        "label": "Ver mas sobre empeñar",
+        "action": "/empena",
+        "style": "button-icon-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Vende - ¿Cómo funciona?",
+      "slug": "vende-como-funciona",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "vende"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'vende-como-funciona')}}",
+      "title": "Vende - ¿Cómo funciona?",
+      "slug": "vende-como-funciona",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "¿Cómo funciona?",
+        "page_block_style": "text-center"
+      },
+      "cta": {
+        "label": "Cotiza tus prendas",
+        "action": "/valuador/venta",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "¿Cómo funciona la venta de prendas en Presta Prenda?",
+      "slug": "como-funciona-la-venta-de-prendas-en-presta-prenda",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "vende"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'como-funciona-la-venta-de-prendas-en-presta-prenda')}}",
+      "title": "¿Cómo funciona la venta de prendas en Presta Prenda?",
+      "slug": "como-funciona-la-venta-de-prendas-en-presta-prenda",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "¿Cómo funciona la venta de prendas en Presta Prenda?",
+        "body": "Vender tus prendas en Presta Prenda es rápido, seguro y sin complicaciones. Descubre las ventajas que hacen de nuestro servicio la mejor opción para obtener dinero al instante, con total confianza:\n\n- Más de 1,100 sucursales en todo el país\n- Abierto todos los días del año\n- Atención en un amplio horario\n- Acceso a la App de Banco Azteca en cualquier momento",
+        "page_block_style": "foreground-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Vende - Seguridad y rapidez en cada paso",
+      "slug": "vende-seguridad-y-rapidez-en-cada-paso",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "vende"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'vende-seguridad-y-rapidez-en-cada-paso')}}",
+      "title": "Vende - Seguridad y rapidez en cada paso",
+      "slug": "vende-seguridad-y-rapidez-en-cada-paso",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Seguridad y rapidez en cada paso",
+        "body": "En Presta Prenda cuidamos cada detalle para que vendas con confianza.\n\n- Respuesta inmediata\n- Trámite sencillo\n- Cámaras de vigilancia",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Vende - Encuentra tu sucursal más cercana",
+      "slug": "vende-encuentra-tu-sucursal-mas-cercana",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "vende"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'vende-encuentra-tu-sucursal-mas-cercana')}}",
+      "title": "Vende - Encuentra tu sucursal más cercana",
+      "slug": "vende-encuentra-tu-sucursal-mas-cercana",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Encuentra tu sucursal más cercana",
+        "body": "Con más de 1,100 sucursales en todo el país, siempre hay un lugar cercano donde puedes vender tus prendas.",
+        "page_block_style": "background-left"
+      },
+      "cta": {
+        "label": "Encuentra tu sucursal",
+        "action": "/localizador-sucursales",
+        "style": "button-icon-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Protege tus joyas, monedas, bienes de forma segura",
+      "slug": "protege-tus-joyas-monedas-bienes-de-forma-segura",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "resguarda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'protege-tus-joyas-monedas-bienes-de-forma-segura')}}",
+      "title": "Protege tus joyas, monedas, bienes de forma segura",
+      "slug": "protege-tus-joyas-monedas-bienes-de-forma-segura",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Protege tus joyas, monedas, bienes de forma segura",
+        "subheadline": "Resérvales un espacio seguro con nosotros",
+        "page_block_style": "hero"
+      },
+      "cta": {
+        "label": "Calcula el valor de tus prendas",
+        "action": "/valuador/resguarda",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Tus prendas seguras. Tú decides cuando volver por ellas.",
+      "slug": "tus-prendas-seguras-tu-decides-cuando-volver",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "resguarda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'tus-prendas-seguras-tu-decides-cuando-volver')}}",
+      "title": "Tus prendas seguras. Tú decides cuando volver por ellas.",
+      "slug": "tus-prendas-seguras-tu-decides-cuando-volver",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Tus prendas seguras.\nTú decides cuando volver por ellas.",
+        "body": "¿Aún no decides si empeñar o vender? Con nuestro servicio de resguardo, puedes dejar tus joyas u oro en custodia segura mientras lo piensas. Sin compromiso, sin presión. Porque en Presta Prenda, tu tranquilidad es lo más valioso.",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "¿Cómo resguardar tus prendas en Presta Prenda?",
+      "slug": "como-resguardar-tus-prendas-en-presta-prenda",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "resguarda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'como-resguardar-tus-prendas-en-presta-prenda')}}",
+      "title": "¿Cómo resguardar tus prendas en Presta Prenda?",
+      "slug": "como-resguardar-tus-prendas-en-presta-prenda",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "¿Cómo resguardar tus prendas en Presta Prenda?",
+        "body": "Resguardar tus prendas en Presta Prenda es rápido, seguro y sin complicaciones. Descubre las ventajas que hacen de nuestro servicio la mejor opción para proteger lo que más valoras:\n\n- Más de 1,100 sucursales en todo el país\n- Abierto todos los días del año\n- Atención en un amplio horario\n- Acceso a la App de Banco Azteca en cualquier momento\n- Acceso inmediato a un préstamo pre autorizado.",
+        "page_block_style": "foreground-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Resguarda - Flexibilidad que se adapta a ti",
+      "slug": "resguarda-flexibilidad-que-se-adapta-a-ti",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "resguarda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'resguarda-flexibilidad-que-se-adapta-a-ti')}}",
+      "title": "Resguarda - Flexibilidad que se adapta a ti",
+      "slug": "resguarda-flexibilidad-que-se-adapta-a-ti",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Flexibilidad que se adapta a ti",
+        "body": "En Presta Prenda, tú tienes el control. Resguarda tus prendas con la tranquilidad de contar con opciones flexibles que se adaptan a tus necesidades y te brindan mayor comodidad.\n\n- Tú eliges el monto, interés y plazo\n- Todos los refrendos que necesites",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Resguarda - Seguridad y rapidez en cada paso",
+      "slug": "resguarda-seguridad-y-rapidez-en-cada-paso",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "resguarda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'resguarda-seguridad-y-rapidez-en-cada-paso')}}",
+      "title": "Resguarda - Seguridad y rapidez en cada paso",
+      "slug": "resguarda-seguridad-y-rapidez-en-cada-paso",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Seguridad y rapidez en cada paso",
+        "body": "Tu tranquilidad es lo más importante. Nuestro proceso está diseñado para que resguardar tus prendas sea seguro y confiable.\n\n- Resguardo de prendas 100% seguro\n- Respuesta inmediata\n- Trámite sencillo, sin historial crediticio, sin comprobante de ingreso y sin aval\n- Cámaras de vigilancia\n- Prendas aseguradas por el valor del avalúo.",
+        "page_block_style": "foreground-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Encuentra tu sucursal más cercana para resguardar tus prendas",
+      "slug": "encuentra-tu-sucursal-mas-cercana-para-resguardar-tus-prendas",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "resguarda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'encuentra-tu-sucursal-mas-cercana-para-resguardar-tus-prendas')}}",
+      "title": "Encuentra tu sucursal más cercana para resguardar tus prendas",
+      "slug": "encuentra-tu-sucursal-mas-cercana-para-resguardar-tus-prendas",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Encuentra tu sucursal más cercana para resguardar tus prendas",
+        "body": "Con más de 1,100 sucursales en todo el país, siempre hay un lugar cercano donde resguardar tus prendas con seguridad control y tranquilidad.",
+        "page_block_style": "background-left"
+      },
+      "cta": {
+        "label": "Encuentra tu sucursal",
+        "action": "/localizador-sucursales",
+        "style": "button-icon-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Piezas únicas de oro, auténticas y al mejor precio del mercado.",
+      "slug": "piezas-unicas-de-oro-autenticas-y-al-mejor-precio-del-mercado",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "compra"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'piezas-unicas-de-oro-autenticas-y-al-mejor-precio-del-mercado')}}",
+      "title": "Piezas únicas de oro, auténticas y al mejor precio del mercado.",
+      "slug": "piezas-unicas-de-oro-autenticas-y-al-mejor-precio-del-mercado",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Piezas únicas de oro,\nauténticas y al mejor\nprecio del mercado.",
+        "subheadline": "Descubre joyas, monedas y lingotes certificados al mejor precio.",
+        "page_block_style": "hero"
+      },
+      "cta": {
+        "label": "Visita una sucursal con venta de oro",
+        "action": "/localizador-sucursales",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Compra oro con confianza.",
+      "slug": "compra-oro-con-confianza",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "compra"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'compra-oro-con-confianza')}}",
+      "title": "Compra oro con confianza.",
+      "slug": "compra-oro-con-confianza",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Compra oro con confianza.",
+        "subheadline": "Joyas, monedas o lingotes con garantía y el respaldo de Presta Prenda.",
+        "body": "En Presta Prenda te ofrecemos la oportunidad de adquirir oro en distintas presentaciones: joyas, monedas o lingotes.\n\nCada pieza ha sido evaluada y certificada, ofreciéndote la mejor relación entre precio, seguridad y el valor de la inversión.\n\nYa sea para uso personal, como regalo o para fortalecer tu patrimonio, compra con la certeza de estar eligiendo calidad, respaldo y confianza.",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "¿Cómo comprar oro con Presta Prenda?",
+      "slug": "como-comprar-oro-con-presta-prenda",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "compra"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'como-comprar-oro-con-presta-prenda')}}",
+      "title": "¿Cómo comprar oro con Presta Prenda?",
+      "slug": "como-comprar-oro-con-presta-prenda",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "¿Cómo comprar oro con Presta Prenda?",
+        "body": "Comprar prendas de oro en Presta Prenda es rápido, seguro y sin complicaciones\n\n- Más de 500 sucursales Presta Prenda con venta de piezas de oro en todo el país.\n- Abierto todos los días del año\n- Atención en un amplio horario\n- Acceso a la App de Banco Azteca en cualquier momento",
+        "page_block_style": "foreground-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Compra - Flexibilidad que se adapta a ti",
+      "slug": "compra-flexibilidad-que-se-adapta-a-ti",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "compra"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'compra-flexibilidad-que-se-adapta-a-ti')}}",
+      "title": "Compra - Flexibilidad que se adapta a ti",
+      "slug": "compra-flexibilidad-que-se-adapta-a-ti",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Flexibilidad que se adapta a ti",
+        "body": "En Presta Prenda, tú tienes el control. Paga con la opción que más te convenga.\n\n- Variedad de métodos de pago: efectivo, tarjeta de crédito, tarjeta de débito, compra a crédito, desde la App.",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Seguridad y rapidez",
+      "slug": "seguridad-y-rapidez",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "compra"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'seguridad-y-rapidez')}}",
+      "title": "Seguridad y rapidez",
+      "slug": "seguridad-y-rapidez",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Seguridad y rapidez",
+        "body": "Tu tranquilidad es lo más importante. Nuestro proceso asegura que tu compra sea segura y auténtica.\n\n- Oro auténtico.\n- Lingotes de oro certificado.\n- Relojes originales.\n- Cámaras de vigilancia",
+        "page_block_style": "foreground-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Encuentra tu sucursal más cercana con catálogo digital",
+      "slug": "encuentra-tu-sucursal-mas-cercana-con-catalogo-digital",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "compra"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'encuentra-tu-sucursal-mas-cercana-con-catalogo-digital')}}",
+      "title": "Encuentra tu sucursal más cercana con catálogo digital",
+      "slug": "encuentra-tu-sucursal-mas-cercana-con-catalogo-digital",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Encuentra tu sucursal más cercana con catálogo digital",
+        "body": "Con más de 1,100 sucursales en todo el país, siempre hay un lugar cercano donde comprar oro con seguridad y confianza. Visítanos y llévate esa pieza especial al instante.",
+        "page_block_style": "background-left"
+      },
+      "cta": {
+        "label": "Encuentra tu sucursal",
+        "action": "/localizador-sucursales",
+        "style": "button-icon-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Terminos y condiciones",
+      "slug": "terminos-y-condiciones",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "compra"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'terminos-y-condiciones')}}",
+      "title": "Terminos y condiciones",
+      "slug": "terminos-y-condiciones",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Terminos y condiciones",
+        "body": "- Piezas seminuevas comercializadas por Grupo Elektrafin S.A. de C.V.\n- Los descuentos son válidos únicamente en piezas seleccionadas, pregunte previamente a su vendedor.\n- Los precios y descuentos pueden modificarse total o parcialmente en cualquier momento, sin previo aviso.\n- En piezas de oro no contamos con cambios ni devoluciones.\n- Encuentra la venta de piezas de oro en las siguientes sucursales Ver sucursales con venta ›",
+        "page_block_style": "text-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Solicitar tu préstamo tiene grandes beneficios",
+      "slug": "solicitar-tu-prestamo-tiene-grandes-beneficios",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "movilidad"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'solicitar-tu-prestamo-tiene-grandes-beneficios')}}",
+      "title": "Solicitar tu préstamo tiene grandes beneficios",
+      "slug": "solicitar-tu-prestamo-tiene-grandes-beneficios",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Solicitar tu préstamo\ntiene GRANDES\nBENEFICIOS",
+        "body": "- Recibes hasta el 80% del valor de tu auto\n- Tendrás tu préstamo en máximo 24 horas\n- ¡Sigues manejando tu auto!\n- Tasa preferencial desde el 3.7%\n- Seguro de vida incluido\n- GPS sin costo",
+        "page_block_style": "columns"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Características del producto Préstamo Automotriz",
+      "slug": "caracteristicas-del-producto-prestamo-automotriz",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "movilidad"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'caracteristicas-del-producto-prestamo-automotriz')}}",
+      "title": "Características del producto Préstamo Automotriz",
+      "slug": "caracteristicas-del-producto-prestamo-automotriz",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Características del producto\nPréstamo Automotriz",
+        "body": "- Financiamiento rápido y accesible\n- Condiciones flexibles y cómodas\n- Seguridad adicional a ti y tu auto\n- Opciones de pago y liquidación flexibles\n- Requisitos claros y sencillos",
+        "page_block_style": "full-foreground-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Movilidad - Encuentra tu sucursal más cercana",
+      "slug": "movilidad-encuentra-tu-sucursal-mas-cercana",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "movilidad"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'movilidad-encuentra-tu-sucursal-mas-cercana')}}",
+      "title": "Movilidad - Encuentra tu sucursal más cercana",
+      "slug": "movilidad-encuentra-tu-sucursal-mas-cercana",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Encuentra tu sucursal mas cercana",
+        "body": "Contamos con más de 50 sucursales con servicio de Préstamo Automotriz.\nLocaliza tu sucursal más cercana",
+        "page_block_style": "text-center"
+      },
+      "cta": {
+        "label": "Localiza tu sucursal",
+        "action": "/localizador-sucursales",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Recibe efectivo al instante al valuar tu reloj.",
+      "slug": "recibe-efectivo-al-instante-al-valuar-tu-reloj",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "relojes"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'recibe-efectivo-al-instante-al-valuar-tu-reloj')}}",
+      "title": "Recibe efectivo al instante al valuar tu reloj.",
+      "slug": "recibe-efectivo-al-instante-al-valuar-tu-reloj",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Recibe efectivo al\ninstante al valuar\ntu reloj.",
+        "subheadline": "Estás justo a tiempo para lograr lo que quieres.",
+        "page_block_style": "hero"
+      },
+      "cta": {
+        "label": "Visita una sucursal con venta de oro",
+        "action": "/localizador-sucursales",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Te ofrecemos soluciones inteligentes",
+      "slug": "te-ofrecemos-soluciones-inteligentes",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "relojes"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'te-ofrecemos-soluciones-inteligentes')}}",
+      "title": "Te ofrecemos soluciones inteligentes",
+      "slug": "te-ofrecemos-soluciones-inteligentes",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "body": "Te ofrecemos soluciones inteligentes para tus necesidades específicas de dinero inmediato, a través, de créditos prendarios con relojes en garantía, brindando diferentes opciones de pago de acuerdo a tus posibilidades.",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "¿Quieres comprar más relojes?",
+      "slug": "quieres-comprar-mas-relojes",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "relojes"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'quieres-comprar-mas-relojes')}}",
+      "title": "¿Quieres comprar más relojes?",
+      "slug": "quieres-comprar-mas-relojes",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "¿Quieres comprar más relojes?",
+        "body": "También te ofrecemos extraordinarias oportunidades de comprar, relojes originales al mejor precio, con diferentes opciones de pago de acuerdo a tus posibilidades",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Invierte con confianza en Monedas de Oro",
+      "slug": "invierte-con-confianza-en-monedas-de-oro",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "monedas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'invierte-con-confianza-en-monedas-de-oro')}}",
+      "title": "Invierte con confianza en Monedas de Oro",
+      "slug": "invierte-con-confianza-en-monedas-de-oro",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Invierte con confianza\nen Monedas de Oro",
+        "subheadline": "Seguras, certificadas y con alto valor a largo plazo. De venta en Presta Prenda",
+        "page_block_style": "hero"
+      },
+      "cta": {
+        "label": "Encuéntralas en tu sucursal",
+        "action": "/localizador-sucursales",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Monedas de oro - Centenario",
+      "slug": "monedas-de-oro-centenario",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "monedas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'monedas-de-oro-centenario')}}",
+      "title": "Monedas de oro - Centenario",
+      "slug": "monedas-de-oro-centenario",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Centenario",
+        "subheadline": "$50 pesos oro",
+        "body": "Esta pieza de acuño en 1921 como moneda de cuño corriente para conmemorar el primer centenario de la independencia de México. Posteriormente en 1931, se suspendió su acuñación y no fue sino hasta 1943 que se volvió a acuñar debido a la creciente demanda de monedas de oro que existía en esa época. En el anverso presenta uno de los escudos nacionales utilizados en el pasado, y el reverso simboliza a una Victoria Alada, representada en el monumento del Ángel de la Independencia, junto con un fondo de los legendarios volcanes Iztaccihuatl y Popocatépetl.\nEsta pieza tiene un contenido de oro puro de 1.20565 onzas y al igual que todas las piezas de la familia del Centenario, tiene una pureza de 0.900."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Monedas de oro - Azteca",
+      "slug": "monedas-de-oro-azteca",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "monedas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'monedas-de-oro-azteca')}}",
+      "title": "Monedas de oro - Azteca",
+      "slug": "monedas-de-oro-azteca",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Azteca",
+        "subheadline": "$20 pesos oro",
+        "body": "Esta pieza fue acuñada inicialmente en 1917, de acuerdo con las características de la reforma monetaria de 1905.El águila que aparece en esta pieza tuvo presencia en el amonedado nacional desde 1825. El reverso ilustra la piedra del calendario Azteca. Se cree que cuando Hernán Cortés conquistó México en 1521, el calendario Azteca residió en el \"Templo Mayor\" de la ciudad. Derribada y enterrada cuando los españoles destruyeron el templo, fue redescubierta en 1790. Tiene un contenido de 0.48227 onzas de oro puro."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Monedas de oro - Hidalgo",
+      "slug": "monedas-de-oro-hidalgo",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "monedas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'monedas-de-oro-hidalgo')}}",
+      "title": "Monedas de oro - Hidalgo",
+      "slug": "monedas-de-oro-hidalgo",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Hidalgo",
+        "body": "Esta pieza, acuñada bajo la reforma monetaria de 1905, constituye el primer amonedado republicano que contiene la reproducción de un héroe nacional: Miguel Hidalgo y Costilla, quien inició la Guerra de Independencia el 16 de septiembre de 1810. El anverso muestra a la típica águila que se utilizaba en el escudo nacional de aquella época, mientras que en el reverso se encuentra el perfil de Hidalgo. Esta pieza tiene un contenido de 0.24113 onzas de oro puro.\nTambién se acuñan piezas de 5, 2.5 y 2 pesos oro con un contenido de 0.12057 onzas, 0.06028 onzas y 0.04823 onzas de oro puro, respectivamente."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Conoce nuestros lingotes de oro certificados 24K",
+      "slug": "conoce-nuestros-lingotes-de-oro-certificados-24k",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "laminas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'conoce-nuestros-lingotes-de-oro-certificados-24k')}}",
+      "title": "Conoce nuestros lingotes de oro certificados 24K",
+      "slug": "conoce-nuestros-lingotes-de-oro-certificados-24k",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Conoce nuestros lingotes de oro certificados 24K",
+        "subheadline": "Invierte con confianza en oro puro y garantizado.",
+        "page_block_style": "hero"
+      },
+      "cta": {
+        "label": "Encuéntralos en tu sucursal",
+        "action": "/localizador-sucursales",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Laminas de oro - Legado",
+      "slug": "laminas-de-oro-legado",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "laminas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'laminas-de-oro-legado')}}",
+      "title": "Laminas de oro - Legado",
+      "slug": "laminas-de-oro-legado",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Legado",
+        "body": "El lingote de oro presenta a Lady Fortuna, la diosa romana de la buena fortuna y la prosperidad. Como el primer diseño decorativo en barras de lingotes del refinador más prestigioso de metales preciosos, Lady Fortuna se ha convertido en un emblema de calidad excepcional entre los inversionistas. Con una pureza de 9999, el lingote de oro Fortuna es rico en belleza y ha tenido un éxito resonante durante décadas.\nDeseadas por su diseño y brillo, la reputación, calidad y numeración serial de los lingotes de Oro Lady Fortuna las convierten en una inversión confiable muy buscada por los compradores. Las características y el contenido de los lingotes están firmados en el embalaje y cada lingote viene con un certificado de autenticidad.",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Laminas de oro - Hermoso diseño",
+      "slug": "laminas-de-oro-hermoso-diseno",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "laminas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'laminas-de-oro-hermoso-diseno')}}",
+      "title": "Laminas de oro - Hermoso diseño",
+      "slug": "laminas-de-oro-hermoso-diseno",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Hermoso diseño",
+        "body": "Lady Fortuna™ fue diseñada con la máxima atención al detalle, comenzando con las líneas suavemente curvilíneas que retratan a la diosa romana de la buena fortuna, que a través de una excepcional economía de espacio se integran sin esfuerzo con los bordes rectilíneos del clásico lingote acuñado. Sus símbolos antiguos, una gavilla de trigo, la flor de amapola, el Cuerno de la Abundancia, la Rueda de la Fortuna y las Manos de la Fortuna que comparten libremente su benevolencia con los demás, son la razón fundamental que captura instintivamente nuestra filosofía, una cultura y una creencia profundamente arraigada de que el arte no es simplemente una cuestión estética, sino también una dedicación a la excelencia en todos los esfuerzos.\n\nAcabado tipo prueba: El estándar de calidad de la industria\n\nEl lingote de Lady Fortuna™ se acuña con un acabado altamente pulido, un lingote acuñado con acabado tipo prueba para presentar una superficie deslumbrante. Nunca comprometido, ese proceso complejo se mantiene hasta el día de hoy, permitiéndonos lograr y mantener una calidad superior inigualable, de la cual Lady Fortuna™ es el principal símbolo en toda la industria de metales preciosos a nivel mundial.",
+        "page_block_style": "foreground-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "La ultima innovacion de seguridad de PAMP, VERISCAN™",
+      "slug": "la-ultima-innovacion-de-seguridad-de-pamp-veriscan",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "laminas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'la-ultima-innovacion-de-seguridad-de-pamp-veriscan')}}",
+      "title": "La ultima innovacion de seguridad de PAMP, VERISCAN™",
+      "slug": "la-ultima-innovacion-de-seguridad-de-pamp-veriscan",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "La ultima innovacion de seguridad de PAMP, VERISCAN™",
+        "body": "Es un sistema de escaneo revolucionario que verifica cualquier producto registrado cuyo empaque CertiPAMP o certificado, lleve el logo VERISCAN™ y el código QR correspondiente. La tecnología patentada identifica la topografía microscópica única del lingote, al igual que una huella digital. Aumentando la eficiencia y reduciendo en gran medida el riesgo de falsificaciones. El sistema, ya sea como aplicación de iPhone® o escáner con software para PC, mejora la negociabilidad de los productos compatibles con VERISCAN™ tanto para distribuidores como para el público en general.",
+        "page_block_style": "background-center"
+      },
+      "cta": {
+        "label": "Encuéntralas aquí",
+        "action": "/localizador-sucursales",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Queremos estar cerca de ti",
+      "slug": "queremos-estar-cerca-de-ti",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "centro-de-ayuda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'queremos-estar-cerca-de-ti')}}",
+      "title": "Queremos estar cerca de ti",
+      "slug": "queremos-estar-cerca-de-ti",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Queremos estar\ncerca de ti",
+        "body": "En Presta Prenda te acompañamos para que tomes las mejores decisiones, con respuestas rápidas, información útil y el apoyo de expertos en oro",
+        "page_block_style": "hero"
+      },
+      "cta": {
+        "label": "Buzón de sugerencias",
+        "action": "/buzon-de-sugerencias",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Síguenos y mantente informado",
+      "slug": "siguenos-y-mantente-informado",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "centro-de-ayuda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'siguenos-y-mantente-informado')}}",
+      "title": "Síguenos y mantente informado",
+      "slug": "siguenos-y-mantente-informado",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Síguenos y mantente informado",
+        "body": "Descubre consejos, promociones y contenido exclusivo en nuestras redes sociales.\n\nQueremos estar cerca de ti también vía Instagram y Facebook.",
+        "page_block_style": "foreground-right"
+      },
+      "cta": {
+        "label": "Recibe consejos financieros",
+        "action": "/boletin",
+        "style": "button-icon-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Legales generales",
+      "slug": "legales-generales",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "mapa-de-sitio"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'legales-generales')}}",
+      "title": "Legales generales",
+      "slug": "legales-generales",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Legales generales",
+        "body": "Legales 1: ...",
+        "page_block_style": "text-left"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Preguntas frecuentes",
+      "slug": "preguntas-frecuentes",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "home",
+        "empena",
+        "vende",
+        "resguarda",
+        "compra",
+        "relojes",
+        "monedas-de-oro",
+        "laminas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'preguntas-frecuentes')}}",
+      "title": "Preguntas frecuentes",
+      "slug": "preguntas-frecuentes",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Preguntas frecuentes",
+        "page_block_style": "text-center"
+      },
+      "cta": {
+        "supporting_copy": "¿No encuentras respuesta a tu pregunta?\nVisita nuestro Centro de ayuda para conocer más.",
+        "label": "Ir a Centro de ayuda",
+        "action": "/centro-de-ayuda",
+        "style": "button"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "El respaldo de Banco Azteca",
+      "slug": "el-respaldo-de-banco-azteca",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "empena",
+        "vende",
+        "resguarda",
+        "compra",
+        "relojes",
+        "monedas-de-oro",
+        "laminas-de-oro"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'el-respaldo-de-banco-azteca')}}",
+      "title": "El respaldo de Banco Azteca",
+      "slug": "el-respaldo-de-banco-azteca",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "El respaldo de Banco Azteca",
+        "body": "Con el respaldo de Banco Azteca, no solo obtienes un préstamo seguro, también disfrutas de las ventajas de su app.\n\nPaga tus refrendos de Presta Prenda fácilmente y accede a servicios como envío y recepción de dinero, retiros sin tarjeta, y pago de agua, luz, predial y más, todo desde tu celular.",
+        "page_block_style": "foreground-right"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Siempre una sucursal cerca de ti",
+      "slug": "siempre-una-sucursal-cerca-de-ti",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "tags": [
+        "relojes",
+        "monedas-de-oro",
+        "laminas-de-oro",
+        "centro-de-ayuda"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "type": "blocks",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'siempre-una-sucursal-cerca-de-ti')}}",
+      "title": "Siempre una sucursal cerca de ti",
+      "slug": "siempre-una-sucursal-cerca-de-ti",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "headline": "Siempre una sucursal cerca de ti",
+        "body": "Con más de 1,100 sucursales en todo el país, siempre hay una opción accesible para empeñar con seguridad y confianza. Encuentra la más cercana y obtén efectivo al instante.",
+        "page_block_style": "background-left"
+      },
+      "cta": {
+        "label": "Encuentra tu sucursal",
+        "action": "/localizador-sucursales",
+        "style": "button-icon-right"
+      }
+    }
+  }
+]
+```

@@ -1,0 +1,363 @@
+---
+title: "Page Meta"
+description: "Configure per-page metadata for CXF projects"
+---
+
+# Page Meta
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This seed defines the metadata and SEO configuration for individual pages in CXF.
+
+---
+
+## 📋 Fields
+
+<table style="min-width: 350px">
+<colgroup><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"><col style="min-width: 25px"></colgroup><tbody><tr><th colspan="1" rowspan="1"><p>Group</p></th><th colspan="1" rowspan="1"><p>Field</p></th><th colspan="1" rowspan="1"><p>Slug</p></th><th colspan="1" rowspan="1"><p>Data Type</p></th><th colspan="1" rowspan="1"><p>Appearance</p></th><th colspan="1" rowspan="1"><p>Is Array</p></th><th colspan="1" rowspan="1"><p>Has Index</p></th><th colspan="1" rowspan="1"><p>Allow Facets</p></th><th colspan="1" rowspan="1"><p>Required</p></th><th colspan="1" rowspan="1"><p>Hidden</p></th><th colspan="1" rowspan="1"><p>List Options</p></th><th colspan="1" rowspan="1"><p>Placeholder</p></th><th colspan="1" rowspan="1"><p>Help Text</p></th><th colspan="1" rowspan="1"><p>Recommended Validations</p></th></tr><tr><td colspan="1" rowspan="1"><p>Default</p></td><td colspan="1" rowspan="1"><p><strong>Page Title</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageTitle</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>Short</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p>e.g., About Us</p></td><td colspan="1" rowspan="1"><p>Human-readable page title; often used for <code spellcheck="false">&lt;h1&gt;</code> and in breadcrumbs.</p></td><td colspan="1" rowspan="1"><p>Min length 3; max length 120</p></td></tr><tr><td colspan="1" rowspan="1"><p>Default</p></td><td colspan="1" rowspan="1"><p><strong>Permalink</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">permalink</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>Short</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">/about</code> or <code spellcheck="false">/blog/category</code></p></td><td colspan="1" rowspan="1"><p>URL path (relative). Use lowercase, hyphen-separated words; avoid trailing slash (except root).</p></td><td colspan="1" rowspan="1"><p>Must match URL/slug regex; unique per locale</p></td></tr><tr><td colspan="1" rowspan="1"><p>Default</p></td><td colspan="1" rowspan="1"><p><strong>Page Type</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageType</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>List</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>home, info, landing, featured-listing, listing, detail, funnel</p></td><td colspan="1" rowspan="1"><p>Select page type</p></td><td colspan="1" rowspan="1"><p>Defines defaults for robots, canonical, JSON-LD presets. Options: home, info, landing, listing, detail.</p></td></tr><tr><td colspan="1" rowspan="1"><p>Default</p></td><td colspan="1" rowspan="1"><p><strong>Breadcrumbs Override</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">breadcrumbsOverride</code></p></td><td colspan="1" rowspan="1"><p>Object</p></td><td colspan="1" rowspan="1"><p>Reference</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p>Select pages in order</p></td><td colspan="1" rowspan="1"><p>Optional manual breadcrumb trail; if empty, auto-derived from navigation.</p></td><td colspan="1" rowspan="1"><p>Must reference valid pages; order defines hierarchy</p></td></tr><tr><td colspan="1" rowspan="1"><p>Default</p></td><td colspan="1" rowspan="1"><p><strong>Page Head Scripts</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageHeadScripts</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>Long</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">// JS snippet; omit &lt;script&gt; tags</code></p></td><td colspan="1" rowspan="1"><p>Page-scoped scripts (consent-aware). Do not duplicate global analytics/pixels. Load async/defer.</p></td><td colspan="1" rowspan="1"><p>JS only; no <code spellcheck="false">&lt;script&gt;</code> wrappers; must respect consent/CSP; keep lightweight</p></td></tr><tr><td colspan="1" rowspan="1"><p>SEO per Page</p></td><td colspan="1" rowspan="1"><p><strong>Page Meta Title</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageMetaTitle</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>Short</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p>e.g., About Us · Brand</p></td><td colspan="1" rowspan="1"><p>SEO <code spellcheck="false">&lt;title&gt;</code> override. Falls back to Site Settings template when empty.</p></td><td colspan="1" rowspan="1"><p>Max length 60; no line breaks</p></td></tr><tr><td colspan="1" rowspan="1"><p>SEO per Page</p></td><td colspan="1" rowspan="1"><p><strong>Page Meta Description</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageMetaDescription</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>Long</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p>Up to 160 characters</p></td><td colspan="1" rowspan="1"><p>SEO description override. Falls back to global default when empty.</p></td><td colspan="1" rowspan="1"><p>Max length 160</p></td></tr><tr><td colspan="1" rowspan="1"><p>SEO per Page</p></td><td colspan="1" rowspan="1"><p><strong>Page Canonical URL</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageCanonicalUrl</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>Short</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">https://www.example.com/about</code></p></td><td colspan="1" rowspan="1"><p>Authoritative URL for this page. Leave blank to derive from routing.</p></td><td colspan="1" rowspan="1"><p>Must start with <code spellcheck="false">https://</code>; absolute URL; strip tracking params</p></td></tr><tr><td colspan="1" rowspan="1"><p>SEO per Page</p></td><td colspan="1" rowspan="1"><p><strong>Page Robots Indexing</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageRobotsIndexing</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>List</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>index, noindex</p></td><td colspan="1" rowspan="1"><p>index or noindex</p></td><td colspan="1" rowspan="1"><p>Controls whether page is indexed by search engines. Defaults from page type policy.</p></td><td colspan="1" rowspan="1"><p>–</p></td></tr><tr><td colspan="1" rowspan="1"><p>SEO per Page</p></td><td colspan="1" rowspan="1"><p><strong>Page Robots Follow</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageRobotsFollow</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>List</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>TRUE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>follow, nofollow</p></td><td colspan="1" rowspan="1"><p>follow or nofollow</p></td><td colspan="1" rowspan="1"><p>Controls whether links on the page are followed. Usually “follow.”</p></td><td colspan="1" rowspan="1"><p>–</p></td></tr><tr><td colspan="1" rowspan="1"><p>Social and Sharing</p></td><td colspan="1" rowspan="1"><p><strong>Page Open Graph Title</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageOgTitle</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>Short</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p>Defaults to Meta Title</p></td><td colspan="1" rowspan="1"><p>OG title override used for social sharing cards.</p></td><td colspan="1" rowspan="1"><p>Max length 60</p></td></tr><tr><td colspan="1" rowspan="1"><p>Social and Sharing</p></td><td colspan="1" rowspan="1"><p><strong>Page Open Graph Description</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageOgDescription</code></p></td><td colspan="1" rowspan="1"><p>Text</p></td><td colspan="1" rowspan="1"><p>Long</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p>Defaults to Meta Description</p></td><td colspan="1" rowspan="1"><p>OG description override for social sharing cards.</p></td><td colspan="1" rowspan="1"><p>Max length 160</p></td></tr><tr><td colspan="1" rowspan="1"><p>Social and Sharing</p></td><td colspan="1" rowspan="1"><p><strong>Page Open Graph Image</strong></p></td><td colspan="1" rowspan="1"><p><code spellcheck="false">pageOgImage</code></p></td><td colspan="1" rowspan="1"><p>Media</p></td><td colspan="1" rowspan="1"><p>Image</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>FALSE</p></td><td colspan="1" rowspan="1"><p>–</p></td><td colspan="1" rowspan="1"><p>Upload 1200×630 px image</p></td><td colspan="1" rowspan="1"><p>Default social sharing image for this page.</p></td><td colspan="1" rowspan="1"><p>File type PNG/JPG; min 1200×630 px; aspect ratio ~1.91:1</p></td></tr></tbody>
+</table>
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples.
+
+---
+
+## 📦 JSON Seed
+
+```json expandable
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Page Meta",
+      "slug": "page-meta",
+      "type": "blocks",
+      "default_tags_ids": ["v1"]
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Title",
+      "slug": "page_title",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "e.g., About Us",
+      "help_text": "Human-readable page title; often used for <h1> and in breadcrumbs.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_title",
+      "validations": {
+        "min": 3,
+        "max": 120
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Permalink",
+      "slug": "permalink",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "/about or /blog/category",
+      "help_text": "URL path (relative). Use lowercase, hyphen-separated words; avoid trailing slash (except root).",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "slug_permalink",
+      "validations": {
+        "regular_expression": "/^(\\/[a-z0-9-]+)*\\/?$/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Type",
+      "slug": "page_type",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "home",
+        "info",
+        "landing",
+        "listing",
+        "detail",
+        "funnel"
+      ],
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "Select page type",
+      "help_text": "Defines defaults for robots, canonical, JSON-LD presets. Options: home, info, landing, listing, detail, funnel.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_type"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Head Scripts",
+      "slug": "page_head_scripts",
+      "data_type": "text",
+      "appearance": "long",
+      "is_array": true,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "// JS snippet; omit <script> tags",
+      "help_text": "Page-scoped scripts (consent-aware). Do not duplicate global analytics/pixels. Load async/defer.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_head_scripts"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "SEO per Page",
+      "slug": "seo_per_page",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "seo_per_page"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Meta Title",
+      "slug": "page_meta_title",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_per_page', 'page-meta', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "e.g., About Us · Brand",
+      "help_text": "SEO <title> override. Falls back to Site Settings template when empty.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "seo_per_page.page_meta_title",
+      "validations": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Meta Description",
+      "slug": "page_meta_description",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_per_page', 'page-meta', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "long",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Up to 160 characters",
+      "help_text": "SEO description override. Falls back to global default when empty.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "seo_per_page.page_meta_description",
+      "validations": {
+        "min": 0,
+        "max": 160
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Canonical URL",
+      "slug": "page_canonical_url",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_per_page', 'page-meta', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "https://www.example.com/about",
+      "help_text": "Authoritative URL for this page. Leave blank to derive from routing.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "seo_per_page.page_canonical_url",
+      "validations": {
+        "regular_expression": "/^https:\\/\\/.+/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Robots Indexing",
+      "slug": "page_robots_indexing",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_per_page', 'page-meta', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "index",
+        "noindex"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "index or noindex",
+      "help_text": "Controls whether page is indexed by search engines. Defaults from page type policy.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "seo_per_page.page_robots_indexing"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Robots Follow",
+      "slug": "page_robots_follow",
+      "parent_id": "{{getAttributeGroup('print_versions', 'seo_per_page', 'page-meta', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "follow",
+        "nofollow"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "follow or nofollow",
+      "help_text": "Controls whether links on the page are followed. Usually “follow.”",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "seo_per_page.page_robots_follow"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Social and Sharing",
+      "slug": "social_and_sharing",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "social_and_sharing"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Open Graph Title",
+      "slug": "page_open_graph_title",
+      "parent_id": "{{getAttributeGroup('print_versions', 'social_and_sharing', 'page-meta', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Defaults to Meta Title",
+      "help_text": "OG title override used for social sharing cards.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "social_and_sharing.page_open_graph_title",
+      "validations": {
+        "min": 0,
+        "max": 60
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Open Graph Description",
+      "slug": "page_open_graph_description",
+      "parent_id": "{{getAttributeGroup('print_versions', 'social_and_sharing', 'page-meta', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "long",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Defaults to Meta Description",
+      "help_text": "OG description override for social sharing cards.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "social_and_sharing.page_open_graph_description",
+      "validations": {
+        "min": 0,
+        "max": 160
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Open Graph Image",
+      "slug": "page_open_graph_image",
+      "parent_id": "{{getAttributeGroup('print_versions', 'social_and_sharing', 'page-meta', 'blocks')}}",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Upload 1200×630 px image",
+      "help_text": "Default social sharing image for this page.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "social_and_sharing.page_open_graph_image"
+    }
+  }
+]
+```

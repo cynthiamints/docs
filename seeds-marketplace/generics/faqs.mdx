@@ -1,0 +1,82 @@
+---
+title: "FAQs"
+description: "Define a Frequently Asked Questions block with question and answer pairs"
+---
+
+# FAQs
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This seed defines a **FAQs block** in CXF, where each item contains a question and its corresponding answer.
+
+---
+
+## 📋 Fields
+
+| Group   | Field        | Slug       | Data Type | Appearance     | Is Array | Required | Hidden | Placeholder                 | Help Text                            | Recommended Validations |
+| ------- | ------------ | ---------- | --------- | -------------- | -------- | -------- | ------ | --------------------------- | ------------------------------------ | ----------------------- |
+| Default | **Question** | `question` | Text      | Short          | FALSE    | TRUE     | FALSE  | What is your return policy? | The question for this FAQ item.      | –                       |
+| Default | **Answer**   | `answer`   | Text      | Full Formatted | FALSE    | TRUE     | FALSE  | Our return policy is...     | The detailed answer to the question. | –                       |
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples.
+
+---
+
+## 📦 JSON Seed
+
+```json expandable
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "FAQs",
+      "slug": "faqs",
+      "type": "blocks",
+      "default_tags_ids": ["v1"]
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Question",
+      "slug": "question",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "What is your return policy?",
+      "help_text": "The question for this FAQ item.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'faqs')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "question"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Answer",
+      "slug": "answer",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "Our return policy is...",
+      "help_text": "The detailed answer to the question.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'faqs')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "answer"
+    }
+  }
+]
+```

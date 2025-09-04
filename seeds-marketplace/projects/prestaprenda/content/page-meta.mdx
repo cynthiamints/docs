@@ -1,0 +1,620 @@
+---
+title: PrestaPrenda · Page Meta Seeds
+description: Repository of all Page Meta content instances and print versions
+---
+
+# PrestaPrenda · Page Meta Seeds
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+This page exposes all **content seeds** (content_instances + print_versions) that use the **Page Meta** template for PrestaPrenda.  
+
+It is intended as a **copy-paste repository** for seeding multiple records.
+
+---
+
+## 📋 How to use
+
+- Each record consists of:
+  - A `content_instances` object
+  - Its related `print_versions` object
+- All records follow the **Page Meta template**.
+- You can paste multiple records into the array below.
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots or diagrams showing how Page Meta appears in CXF.
+
+---
+
+## 📦 JSON Seeds
+
+```json expandable
+[
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Home",
+      "slug": "page-meta-home",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": [
+        "{{getRecordAttribute('tags', 'slug', 'home')}}"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Home",
+      "slug": "page-meta-home",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-home')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Home",
+        "permalink": "/",
+        "page_type": "home"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Presta Prenda · Inicio",
+        "page_meta_description": "Bienvenido a Presta Prenda, tu aliado en empeños, compras y ventas seguras.",
+        "page_canonical_url": "https://www.prestaprenda.com/",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Presta Prenda · Inicio",
+        "page_open_graph_description": "Bienvenido a Presta Prenda, tu aliado en empeños, compras y ventas seguras."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Empeña",
+      "slug": "page-meta-empena",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": [
+        "{{getRecordAttribute('tags', 'slug', 'empena')}}"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Empeña",
+      "slug": "page-meta-empena",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-empena')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Empeña",
+        "permalink": "/empena",
+        "page_type": "info"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Empeña · Presta Prenda",
+        "page_meta_description": "Obtén efectivo rápido dejando tus pertenencias en resguardo seguro.",
+        "page_canonical_url": "https://www.prestaprenda.com/empena",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Empeña · Presta Prenda",
+        "page_open_graph_description": "Obtén efectivo rápido dejando tus pertenencias en resguardo seguro."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Vende",
+      "slug": "page-meta-vende",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Vende",
+      "slug": "page-meta-vende",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-vende')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Vende",
+        "permalink": "/vende",
+        "page_type": "info"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Vende · Presta Prenda",
+        "page_meta_description": "Vende tus artículos de valor con confianza y recibe el mejor precio.",
+        "page_canonical_url": "https://www.prestaprenda.com/vende",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Vende · Presta Prenda",
+        "page_open_graph_description": "Vende tus artículos de valor con confianza y recibe el mejor precio."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Resguarda",
+      "slug": "page-meta-resguarda",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Resguarda",
+      "slug": "page-meta-resguarda",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-resguarda')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Resguarda",
+        "permalink": "/resguarda",
+        "page_type": "info"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Resguarda · Presta Prenda",
+        "page_meta_description": "Protege tus pertenencias con nuestro servicio de resguardo seguro.",
+        "page_canonical_url": "https://www.prestaprenda.com/resguarda",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Resguarda · Presta Prenda",
+        "page_open_graph_description": "Protege tus pertenencias con nuestro servicio de resguardo seguro."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Compra",
+      "slug": "page-meta-compra",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Compra",
+      "slug": "page-meta-compra",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-compra')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Compra",
+        "permalink": "/compra",
+        "page_type": "info"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Compra · Presta Prenda",
+        "page_meta_description": "Encuentra productos de calidad a precios accesibles en Presta Prenda.",
+        "page_canonical_url": "https://www.prestaprenda.com/compra",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Compra · Presta Prenda",
+        "page_open_graph_description": "Encuentra productos de calidad a precios accesibles en Presta Prenda."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Términos y Condiciones",
+      "slug": "page-meta-terminos-y-condiciones",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Términos y Condiciones",
+      "slug": "page-meta-terminos-y-condiciones",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-terminos-y-condiciones')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Términos y Condiciones",
+        "permalink": "/terminos-y-condiciones",
+        "page_type": "info"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Términos y Condiciones · Presta Prenda",
+        "page_meta_description": "Consulta términos, condiciones y políticas legales de Presta Prenda.",
+        "page_canonical_url": "https://www.prestaprenda.com/terminos-y-condiciones",
+        "page_robots_indexing": "noindex",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Términos y Condiciones · Presta Prenda",
+        "page_open_graph_description": "Consulta términos, condiciones y políticas legales de Presta Prenda."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "404",
+      "slug": "page-meta-404",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "404",
+      "slug": "page-meta-404",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-404')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "404",
+        "permalink": "/404",
+        "page_type": "info"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Página no encontrada · Presta Prenda",
+        "page_meta_description": "La página que buscas no existe o fue movida.",
+        "page_canonical_url": "https://www.prestaprenda.com/404",
+        "page_robots_indexing": "noindex",
+        "page_robots_follow": "nofollow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Página no encontrada · Presta Prenda",
+        "page_open_graph_description": "La página que buscas no existe o fue movida."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Centro de ayuda",
+      "slug": "page-meta-centro-de-ayuda",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Centro de ayuda",
+      "slug": "page-meta-centro-de-ayuda",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-centro-de-ayuda')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Centro de ayuda",
+        "permalink": "/centro-de-ayuda",
+        "page_type": "info"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Centro de ayuda · Presta Prenda",
+        "page_canonical_url": "https://www.prestaprenda.com/centro-de-ayuda",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Centro de ayuda · Presta Prenda"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Mapa de Sitio",
+      "slug": "page-meta-mapa-de-sitio",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Mapa de Sitio",
+      "slug": "page-meta-mapa-de-sitio",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-mapa-de-sitio')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Mapa de Sitio",
+        "permalink": "/mapa-de-sitio",
+        "page_type": "info"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Mapa de sitio · Presta Prenda",
+        "page_canonical_url": "https://www.prestaprenda.com/mapa-de-sitio"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Mapa de sitio · Presta Prenda"
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Empeñar y comprar relojes",
+      "slug": "page-meta-relojes",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Empeñar y comprar relojes",
+      "slug": "page-meta-relojes",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-relojes')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Empeñar y comprar relojes",
+        "permalink": "/relojes",
+        "page_type": "landing"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Relojes · Presta Prenda",
+        "page_meta_description": "Empeña tu reloj de lujo y recibe efectivo inmediato con seguridad.",
+        "page_canonical_url": "https://www.prestaprenda.com/relojes",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Relojes · Presta Prenda",
+        "page_open_graph_description": "Empeña tu reloj de lujo y recibe efectivo inmediato con seguridad."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Monedas de oro",
+      "slug": "page-meta-monedas-de-oro",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Monedas de oro",
+      "slug": "page-meta-monedas-de-oro",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-monedas-de-oro')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Monedas de oro",
+        "permalink": "/monedas-de-oro",
+        "page_type": "landing"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Monedas de oro · Presta Prenda",
+        "page_meta_description": "Vende tus monedas de colección al mejor precio en Presta Prenda.",
+        "page_canonical_url": "https://www.prestaprenda.com/monedas-de-oro",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Monedas de oro · Presta Prenda",
+        "page_open_graph_description": "Vende tus monedas de colección al mejor precio en Presta Prenda."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Láminas de oro",
+      "slug": "page-meta-laminas-de-oro",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Láminas de oro",
+      "slug": "page-meta-laminas-de-oro",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-laminas-de-oro')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Láminas de oro",
+        "permalink": "/laminas-de-oro",
+        "page_type": "landing"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Láminas de oro · Presta Prenda",
+        "page_meta_description": "Comercializa tus lingotes de oro o plata con confianza y transparencia.",
+        "page_canonical_url": "https://www.prestaprenda.com/laminas-de-oro",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Láminas de oro · Presta Prenda",
+        "page_open_graph_description": "Comercializa tus lingotes de oro o plata con confianza y transparencia."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Back to school",
+      "slug": "page-meta-back-to-school",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Back to school",
+      "slug": "page-meta-back-to-school",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-back-to-school')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Back to school",
+        "permalink": "/back-to-school",
+        "page_type": "landing"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Back to School · Presta Prenda",
+        "page_meta_description": "Promociones especiales de regreso a clases en empeños, compras y más.",
+        "page_canonical_url": "https://www.prestaprenda.com/back-to-school",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Back to School · Presta Prenda",
+        "page_open_graph_description": "Promociones especiales de regreso a clases en empeños, compras y más."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Movilidad",
+      "slug": "page-meta-movilidad",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": []
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Movilidad",
+      "slug": "page-meta-movilidad",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-movilidad')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Movilidad",
+        "permalink": "/movilidad",
+        "page_type": "landing"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Movilidad · Presta Prenda",
+        "page_meta_description": "Soluciones financieras para autos: empeño, compra y cotización rápida.",
+        "page_canonical_url": "https://www.prestaprenda.com/movilidad",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Movilidad · Presta Prenda",
+        "page_open_graph_description": "Soluciones financieras para autos: empeño, compra y cotización rápida."
+      }
+    }
+  },
+  {
+    "object_type": "content_instances",
+    "data": {
+      "title": "Blog",
+      "slug": "page-meta-blog",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "tags": [
+        "{{getRecordAttribute('tags', 'slug', 'page')}}"
+      ]
+    }
+  },
+  {
+    "object_type": "print_versions",
+    "data": {
+      "title": "Blog",
+      "slug": "page-meta-blog",
+      "type": "blocks",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-meta')}}",
+      "content_instance_id": "{{getRecordAttribute('content_instances', 'slug', 'page-meta-blog')}}",
+      "status": "draft",
+      "language": "es",
+      "environment": "production",
+      "default": {
+        "page_title": "Notas de Blog",
+        "permalink": "/blog",
+        "page_type": "listing"
+      },
+      "seo_per_page": {
+        "page_meta_title": "Blog · Presta Prenda",
+        "page_meta_description": "Lee artículos y consejos sobre empeños, finanzas y más en nuestro blog.",
+        "page_canonical_url": "https://www.prestaprenda.com/blog",
+        "page_robots_indexing": "index",
+        "page_robots_follow": "follow"
+      },
+      "social_and_sharing": {
+        "page_open_graph_title": "Blog · Presta Prenda",
+        "page_open_graph_description": "Lee artículos y consejos sobre empeños, finanzas y más en nuestro blog."
+      }
+    }
+  }
+]

@@ -1,0 +1,159 @@
+---
+title: "Tags"
+description: "Tags used for the Prestaprenda project"
+---
+
+# Tags
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This page documents the **tags** available for the Prestaprenda project.
+
+---
+
+## 📋 Tags Hierarchy
+
+### Page
+
+- **Home**
+- **Empeña**
+- **Vende**
+- **Resguarda**
+- **Compra**
+- **Relojes**
+- **Monedas de oro**
+- **Laminas de oro**
+- **Movilidad**
+- **Blog**
+- **Centro de ayuda**
+- **Mapa de sitio**
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots or diagrams showing how tags are applied in CXF.
+
+---
+
+## 📦 JSON Seed
+
+```json expandable
+[
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Page",
+      "slug": "page",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Home",
+      "slug": "home",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Empeña",
+      "slug": "empena",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Vende",
+      "slug": "vende",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Resguarda",
+      "slug": "resguarda",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Compra",
+      "slug": "compra",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Relojes",
+      "slug": "relojes",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Monedas de oro",
+      "slug": "monedas-de-oro",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Laminas de oro",
+      "slug": "laminas-de-oro",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Movilidad",
+      "slug": "movilidad",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Blog",
+      "slug": "blog",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Centro de ayuda",
+      "slug": "centro-de-ayuda",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  },
+  {
+    "object_type": "tags",
+    "data": {
+      "title": "Mapa de sitio",
+      "slug": "mapa-de-sitio",
+      "parent_id": "{{getRecordAttribute('tags', 'slug', 'page')}}",
+      "visible": true
+    }
+  }
+]
+```

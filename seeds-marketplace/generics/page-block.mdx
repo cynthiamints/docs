@@ -1,0 +1,346 @@
+---
+title: "Page Block"
+description: "Define reusable content blocks with layout, media, and CTA options"
+---
+
+# Page Block
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+This seed defines a reusable content block in CXF, including text, images, layout, and optional call-to-action (CTA).
+
+---
+
+## 📋 Fields
+
+| Group   | Field                    | Slug                   | Data Type | Appearance     | Is Array | Has Index | Allow Facets | Required | Hidden | List Options                                                                                                                               | Placeholder                     | Help Text                                        | Recommended Validations            |
+| ------- | ------------------------ | ---------------------- | --------- | -------------- | -------- | --------- | ------------ | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- | ------------------------------------------------ | ---------------------------------- |
+| Default | **Headline**             | `headline`             | Text      | Full Formatted | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | Compelling Headline             | Main heading for the content within this block.  | –                                  |
+| Default | **Subheadline**          | `subheadline`          | Text      | Full Formatted | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | Supporting text...              | Secondary text or brief summary for the block.   | –                                  |
+| Default | **Body**                 | `body`                 | Text      | Full Formatted | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | Enter block content here        | Main text content of the page block.             | –                                  |
+| Default | **Background Image**     | `background_image`     | Media     | Image          | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | Upload block background         | Image used as the background for the block.      | –                                  |
+| Default | **Background Image Alt** | `background_image_alt` | Text      | Short          | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | Description of background image | Alt text for the background image.               | Max length 120                     |
+| Default | **Foreground Image**     | `foreground_image`     | Media     | Image          | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | Upload decorative image         | Prominent image overlaid on the block content.   | –                                  |
+| Default | **Foreground Image Alt** | `foreground_image_alt` | Text      | Short          | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | Description of foreground image | Alt text for the foreground image.               | Max length 120                     |
+| Default | **Page Block Style**     | `page_block_style`     | Text      | List           | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | hero, text-left, text-center, foreground-left, foreground-right, background-left, background-right, full-foreground-left, text-two-columns | hero                            | Visual layout and styling preset for the block.  | –                                  |
+| CTA     | **Supporting Copy**      | `supporting_copy`      | Text      | Full Formatted | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | (Optional)                      | Short text preceding the CTA, adding context.    | –                                  |
+| CTA     | **Label**                | `label`                | Text      | Short          | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | Learn More                      | Text displayed on the Call to Action.            | Max length 50                      |
+| CTA     | **Action**               | `action`               | Text      | Short          | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | –                                                                                                                                          | /path/to/page or https://...    | URL or action triggered when the CTA is clicked. | Must be valid URL or internal path |
+| CTA     | **Style**                | `style`                | Text      | List           | FALSE    | FALSE     | FALSE        | FALSE    | FALSE  | button, button-icon-right, button-icon-left, anchor, anchor-icon-right, anchor-icon-left                                                   | button                          | Visual style of the Call to Action button/link.  | –                                  |
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples.
+
+---
+
+## 📦 JSON Seed
+
+```json expandable
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Page Block",
+      "slug": "page-block",
+      "type": "blocks",
+      "default_tags_ids": ["v1"]
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Headline",
+      "slug": "headline",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Compelling Headline",
+      "help_text": "Main heading for the content within this block.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "headline"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Subheadline",
+      "slug": "subheadline",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Supporting text...",
+      "help_text": "Secondary text or brief summary for the block.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "subheadline"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Body",
+      "slug": "body",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Enter block content here",
+      "help_text": "Main text content of the page block.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "body"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Background Image",
+      "slug": "background_image",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Upload block background",
+      "help_text": "Image used as the background for the block.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "background_image"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Background Image Alt",
+      "slug": "background_image_alt",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Description of background image",
+      "help_text": "Alt text for the background image.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "background_image_alt",
+      "validations": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Foreground Image",
+      "slug": "foreground_image",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Upload decorative image",
+      "help_text": "Prominent image overlaid on the block content.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "foreground_image"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Foreground Image Alt",
+      "slug": "foreground_image_alt",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Description of foreground image",
+      "help_text": "Alt text for the foreground image.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "foreground_image_alt",
+      "validations": {
+        "min": 0,
+        "max": 120
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Block Style",
+      "slug": "page_block_style",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "hero",
+        "text-left",
+        "text-center",
+        "foreground-left",
+        "foreground-right",
+        "background-left",
+        "background-right",
+        "full-foreground-left",
+        "text-two-columns"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "hero",
+      "help_text": "Visual layout and styling preset for the block.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_block_style"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "CTA",
+      "slug": "cta",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cta"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Supporting Copy",
+      "slug": "supporting_copy",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cta', 'page-block', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "(Optional)",
+      "help_text": "Short text preceding the CTA, adding context.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cta.supporting_copy"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Label",
+      "slug": "label",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cta', 'page-block', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Learn More",
+      "help_text": "Text displayed on the Call to Action.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cta.label",
+      "validations": {
+        "min": 0,
+        "max": 50
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Action",
+      "slug": "action",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cta', 'page-block', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "/path/to/page or https://...",
+      "help_text": "URL or action triggered when the CTA is clicked.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cta.action",
+      "validations": {
+        "regular_expression": "/^(http|https):\\/\\/[^ \\/$.?#].[^\\s]*$|^\\/[^\\s]*$/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Style",
+      "slug": "style",
+      "parent_id": "{{getAttributeGroup('print_versions', 'cta', 'page-block', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "button",
+        "button-icon-right",
+        "button-icon-left",
+        "anchor",
+        "anchor-icon-right",
+        "anchor-icon-left"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "button",
+      "help_text": "Visual style of the Call to Action button/link.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'page-block')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cta.style"
+    }
+  }
+]
+```
