@@ -1,5 +1,387 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: Products
+description: Template definition for Products in PrestaPrenda
 ---
 
+# Products (PrestaPrenda)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+This template defines the **Products** structure for PrestaPrenda, including product details, pricing, media, and categorization.
+
+---
+
+
+See for more details
+https://docs.google.com/spreadsheets/d/1qXXdiZWJ5FomNq66p1I-E-x2GixECZJdmOJKtUxfa2g/edit?gid=1563288939#gid=1563288939&range=A1:D1
+
+
+## 📋 Fields
+
+| Group   | Field              | Slug              | Data Type | Appearance       | Is Array | Required | Hidden | Placeholder              | Help Text | Recommended Validations |
+|---------|--------------------|-------------------|-----------|------------------|----------|----------|--------|--------------------------|-----------|-------------------------|
+| Default | **Name**           | `name`            | Text      | Short            | FALSE    | TRUE     | FALSE  | Anillo de oro 14k        | The product name. | Min length 3; Max length 120 |
+| Default | **Description**    | `description`     | Text      | Full Formatted   | FALSE    | FALSE    | FALSE  | Descripción del producto | Detailed description of the product. | – |
+| Default | **SKU**            | `sku`             | Text      | Short            | FALSE    | TRUE     | FALSE  | SKU12345                 | Unique product identifier. | Must be unique |
+| Default | **Price**          | `price`           | Number    | Currency         | FALSE    | TRUE     | FALSE  | 1500.00                  | Product price in MXN. | Must be numeric |
+| Default | **Discount Price** | `discount_price`  | Number    | Currency         | FALSE    | FALSE    | FALSE  | 1200.00                  | Optional discounted price. | Must be numeric |
+| Default | **Category**       | `category`        | Text      | List             | FALSE    | TRUE     | FALSE  | Joyas                    | Product category (e.g., Joyas, Relojes, Monedas). | Must match allowed categories |
+| Default | **Tags**           | `tags`            | Text      | List             | TRUE     | FALSE    | FALSE  | oro, inversión           | Tags for filtering/search. | – |
+| Media   | **Images**         | `images`          | Media     | Image            | TRUE     | FALSE    | FALSE  | Upload product images    | Product images (multiple allowed). | Min 1 image recommended |
+| Media   | **Video**          | `video`           | Media     | Video            | FALSE    | FALSE    | FALSE  | Upload product video     | Optional product video. | – |
+| SEO     | **SEO Title**      | `seo_title`       | Text      | Short            | FALSE    | FALSE    | FALSE  | Comprar anillo de oro    | SEO title override. | Max length 60 |
+| SEO     | **SEO Description**| `seo_description` | Text      | Long             | FALSE    | FALSE    | FALSE  | Mejor precio en oro      | SEO description override. | Max length 160 |
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots, diagrams, or UI examples of product detail pages.
+
+---
+
+## 📦 JSON Seed (empty)
+
+```json
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Products for Presta Prenda",
+      "slug": "products-for-presta-prenda",
+      "type": "blocks",
+      "config_json": {
+        "is_sellable": true,
+        "manage_inventory": false,
+        "allows_variations": false,
+        "manage_serials": false,
+        "require_unit_based_attributes": false,
+        "require_unit_based_assignment": false,
+        "is_stock_location": false,
+        "is_physical_location": false
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Description",
+      "slug": "description",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "description"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Extended Description",
+      "slug": "extended_description",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "extended_description"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Brand",
+      "slug": "brand",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "brand"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Model",
+      "slug": "model",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "model"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Images",
+      "slug": "images",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": true,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "images"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Fecha de Recepcion",
+      "slug": "fecha_de_recepcion",
+      "data_type": "date",
+      "appearance": "date",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "fecha_de_recepcion"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Fecha de Venta",
+      "slug": "fecha_de_venta",
+      "data_type": "date",
+      "appearance": "date",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "fecha_de_venta"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "BAZ Status",
+      "slug": "baz_status",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "En Guardavalores",
+        "Activa",
+        "Oculta",
+        "Vendida",
+        "Apartada",
+        "Error",
+        "Desconocido"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "baz_status"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Physical features",
+      "slug": "physical_features",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "physical_features"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Gender",
+      "slug": "gender",
+      "parent_id": "{{getAttributeGroup('print_versions', 'physical_features', 'products-for-presta-prenda', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "Dama",
+        "Caballero",
+        "Unisex"
+      ],
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "physical_features.gender"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Condition",
+      "slug": "condition",
+      "parent_id": "{{getAttributeGroup('print_versions', 'physical_features', 'products-for-presta-prenda', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "Buen Estado",
+        "Seminuevo",
+        "Ligeramente maltratado"
+      ],
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "physical_features.condition"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Type of gold",
+      "slug": "type_of_gold",
+      "parent_id": "{{getAttributeGroup('print_versions', 'physical_features', 'products-for-presta-prenda', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "Oro amarillo",
+        "Oro blanco",
+        "Oro rosa",
+        "Combinado"
+      ],
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "physical_features.type_of_gold"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Caratage",
+      "slug": "caratage",
+      "parent_id": "{{getAttributeGroup('print_versions', 'physical_features', 'products-for-presta-prenda', 'blocks')}}",
+      "data_type": "number",
+      "appearance": "2_decimals",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "physical_features.caratage"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Net weight in grams",
+      "slug": "net_weight_in_grams",
+      "parent_id": "{{getAttributeGroup('print_versions', 'physical_features', 'products-for-presta-prenda', 'blocks')}}",
+      "data_type": "number",
+      "appearance": "2_decimals",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "physical_features.net_weight_in_grams"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Ring Size",
+      "slug": "ring_size",
+      "parent_id": "{{getAttributeGroup('print_versions', 'physical_features', 'products-for-presta-prenda', 'blocks')}}",
+      "data_type": "number",
+      "appearance": "slider",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "physical_features.ring_size"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Necklace Lenght",
+      "slug": "necklace_lenght",
+      "parent_id": "{{getAttributeGroup('print_versions', 'physical_features', 'products-for-presta-prenda', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "Corta",
+        "Mediana",
+        "Larga"
+      ],
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'products-for-presta-prenda')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "physical_features.necklace_lenght"
+    }
+  }
+]

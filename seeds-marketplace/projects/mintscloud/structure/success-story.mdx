@@ -1,5 +1,621 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: Success Story
+description: Repository of all Success Story content instances and print versions
 ---
 
+# MintsCloud · Success Story Seeds
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+This page exposes all **content seeds** (content_instances + print_versions) that use the **Success Story** template for MintsCloud.  
+
+It is intended as a **copy-paste repository** for seeding multiple records.
+
+---
+
+## 📋 How to use
+
+- Each record consists of:
+  - A `content_instances` object
+  - Its related `print_versions` object
+- All records follow the **Success Story template**.
+- You can paste multiple records into the array below.
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots or diagrams showing how Success Stories appear in CXF.
+
+---
+
+## 📦 JSON Seeds
+
+```json expandable
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Success Story",
+      "slug": "success-story",
+      "type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Cover Image",
+      "slug": "cover_image",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "cover_image"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Powered by CXF Copy",
+      "slug": "powered_by_cxf_copy",
+      "data_type": "text",
+      "appearance": "full_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "powered_by_cxf_copy"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Landing Section",
+      "slug": "landing_section",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "landing_section"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Clever Section Headline",
+      "slug": "clever_section_headline",
+      "parent_id": "{{getAttributeGroup('print_versions', 'landing_section', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "landing_section.clever_section_headline"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Client Logo",
+      "slug": "client_logo",
+      "parent_id": "{{getAttributeGroup('print_versions', 'landing_section', 'success-story', 'blocks')}}",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "landing_section.client_logo"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Case Study Title",
+      "slug": "case_study_title",
+      "parent_id": "{{getAttributeGroup('print_versions', 'landing_section', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "landing_section.case_study_title"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Case Study Blurb",
+      "slug": "case_study_blurb",
+      "parent_id": "{{getAttributeGroup('print_versions', 'landing_section', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "simple_formatted",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "landing_section.case_study_blurb"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "CTA Supporting Copy",
+      "slug": "cta_supporting_copy",
+      "parent_id": "{{getAttributeGroup('print_versions', 'landing_section', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "(Optional)",
+      "help_text": "Short text preceding the CTA, adding context.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "landing_section.cta_supporting_copy"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "CTA Label",
+      "slug": "cta_label",
+      "parent_id": "{{getAttributeGroup('print_versions', 'landing_section', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "View Details",
+      "help_text": "Text displayed on the Call to Action button/link.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "landing_section.cta_label"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "CTA Action",
+      "slug": "cta_action",
+      "parent_id": "{{getAttributeGroup('print_versions', 'landing_section', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "/product/id or #anchor",
+      "help_text": "URL or action triggered when the CTA is clicked.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "landing_section.cta_action"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "CTA Style",
+      "slug": "cta_style",
+      "parent_id": "{{getAttributeGroup('print_versions', 'landing_section', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "button",
+        "button-icon-right",
+        "button-icon-left",
+        "anchor",
+        "anchor-icon-right",
+        "anchor-icon-left"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "button",
+      "help_text": "Visual style of the Call to Action button/link.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "landing_section.cta_style"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Meta",
+      "slug": "page_meta",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Title",
+      "slug": "pageTitle",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "e.g., About Us",
+      "help_text": "Human-readable page title; often used for <h1> and in breadcrumbs.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.pageTitle"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Slug / Permalink",
+      "slug": "permalik",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "/about or /blog/category",
+      "help_text": "URL path (relative). Use lowercase, hyphen-separated words; avoid trailing slash (except root).",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.permalik"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Permalink Label",
+      "slug": "permalink_label",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.permalink_label"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Type",
+      "slug": "pageType",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "home",
+        "info",
+        "landing",
+        "listing",
+        "detail",
+        "funnel"
+      ],
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": true,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "Select page type",
+      "help_text": "Defines defaults for robots, canonical, JSON-LD presets. Options: home, info, landing, listing, detail.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.pageType"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Breadcrumbs Override",
+      "slug": "breadcrumbsOverride",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta', 'success-story', 'blocks')}}",
+      "data_type": "object",
+      "appearance": "reference",
+      "is_array": true,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Select pages in order",
+      "help_text": "Optional manual breadcrumb trail; if empty, auto-derived from navigation.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.breadcrumbsOverride"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Head Scripts",
+      "slug": "pageHeadScripts",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "long",
+      "is_array": true,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "// JS snippet; omit <script> tags",
+      "help_text": "Page-scoped scripts (consent-aware). Do not duplicate global analytics/pixels. Load async/defer.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.pageHeadScripts"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "SEO per Page",
+      "slug": "seo_per_page",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta', 'success-story', 'blocks')}}",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.seo_per_page"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Meta Title",
+      "slug": "pageMetaTitle",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta.seo_per_page', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "e.g., About Us · Brand",
+      "help_text": "SEO <title> override. Falls back to Site Settings template when empty.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.seo_per_page.pageMetaTitle"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Meta Description",
+      "slug": "pageMetaDescription",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta.seo_per_page', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "long",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Up to 160 characters",
+      "help_text": "SEO description override. Falls back to global default when empty.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.seo_per_page.pageMetaDescription"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Canonical URL",
+      "slug": "pageCanonicalUrl",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta.seo_per_page', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": true,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "https://www.example.com/about",
+      "help_text": "Authoritative URL for this page. Leave blank to derive from routing.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.seo_per_page.pageCanonicalUrl"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Robots Indexing",
+      "slug": "pageRobotsIndexing",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta.seo_per_page', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "index",
+        "noindex"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "index or noindex",
+      "help_text": "Controls whether page is indexed by search engines. Defaults from page type policy.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.seo_per_page.pageRobotsIndexing"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Robots Follow",
+      "slug": "pageRobotsFollow",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta.seo_per_page', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "follow",
+        "nofollow"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": true,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "follow or nofollow",
+      "help_text": "Controls whether links on the page are followed. Usually “follow.”",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.seo_per_page.pageRobotsFollow"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Social and Sharing",
+      "slug": "social_and_sharing",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta', 'success-story', 'blocks')}}",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.social_and_sharing"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Open Graph Title",
+      "slug": "pageOgTitle",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta.social_and_sharing', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Defaults to Meta Title",
+      "help_text": "OG title override used for social sharing cards.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.social_and_sharing.pageOgTitle"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Open Graph Description",
+      "slug": "pageOgDescription",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta.social_and_sharing', 'success-story', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "long",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Defaults to Meta Description",
+      "help_text": "OG description override for social sharing cards.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.social_and_sharing.pageOgDescription"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Page Open Graph Image",
+      "slug": "pageOgImage",
+      "parent_id": "{{getAttributeGroup('print_versions', 'page_meta.social_and_sharing', 'success-story', 'blocks')}}",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Upload 1200×630 px image",
+      "help_text": "Default social sharing image for this page.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'success-story')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "page_meta.social_and_sharing.pageOgImage"
+    }
+  }
+]

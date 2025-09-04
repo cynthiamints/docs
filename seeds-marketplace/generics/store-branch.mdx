@@ -1,5 +1,703 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: Store Branches
+description: Repository of all Store Branches content instances and print versions
 ---
 
+# Generics · Store Branches Seeds
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+This page exposes all **content seeds** (content_instances + print_versions) that use the **Store Branches** template.  
+
+It is intended as a **copy-paste repository** for seeding multiple records.
+
+---
+
+## 📋 How to use
+
+- Each record consists of:
+  - A `content_instances` object
+  - Its related `print_versions` object
+- All records follow the **Store Branches template**.
+- You can paste multiple records into the array below.
+
+---
+
+## 🖼️ Examples
+
+> Placeholder for screenshots or diagrams showing how Store Branches appear in CXF.
+
+---
+
+## 📦 JSON Seeds
+
+```json expandable
+[
+  {
+    "object_type": "content_templates",
+    "data": {
+      "title": "Store Branch",
+      "slug": "store-branch",
+      "type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Location Name",
+      "slug": "location_name",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "Official location name",
+      "help_text": "non-empty; max length 100",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "min": 1,
+        "max": 100
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Branch Code",
+      "slug": "branch_code",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "Internal store code",
+      "help_text": "alphanumeric; max length 20",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "regular_expression": "/^[a-zA-Z0-9]*$/",
+        "max": 20
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Description",
+      "slug": "description",
+      "data_type": "text",
+      "appearance": "long",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Website URL",
+      "slug": "website_url",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "https://…",
+      "help_text": "URL of the location page",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "regular_expression": "/^https?:\\/\\/.+/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Same as (url)",
+      "slug": "same_as_url",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": true,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "help_text": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "regular_expression": "/^https?:\\/\\/.+/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Main Image",
+      "slug": "main_image",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": true,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "help_text": "Cover image",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Walking Directions",
+      "slug": "walking_directions",
+      "data_type": "text",
+      "appearance": "long",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "How to get to the place",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Telephone",
+      "slug": "telephone",
+      "data_type": "text",
+      "appearance": "phone",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "help_text": "Primary phone",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "regular_expression": "/^\\+[1-9]\\d{1,14}$/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Alternate Telephones",
+      "slug": "alternate_telephones",
+      "data_type": "text",
+      "appearance": "phone",
+      "is_array": true,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "help_text": "Lists of altenative phones",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "regular_expression": "/^\\+[1-9]\\d{1,14}$/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Email",
+      "slug": "email",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "info@example.com",
+      "help_text": "Public contact email",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "regular_expression": "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Photos",
+      "slug": "photos",
+      "data_type": "group",
+      "is_array": true,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "help_text": "Country code",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Photo",
+      "slug": "photo",
+      "parent_id": "{{getAttributeGroup('print_versions', 'photos', 'branch', 'blocks')}}",
+      "data_type": "media",
+      "appearance": "image",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "help_text": "\"Format: JPG or PNG file type. Size: Between 10 KB and 5 MB. Recommended resolution: 720 x 720 pixels.\"",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Photo Alt",
+      "slug": "photo_alt",
+      "parent_id": "{{getAttributeGroup('print_versions', 'photos', 'branch', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "help_text": "alternate text in case image cannot be displayed",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Timezone",
+      "slug": "timezone",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "America/Los_Angeles",
+      "help_text": "valid IANA timezone",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "regular_expression": "/^[A-Za-z_]+\\/[A-Za-z_]+$/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Opening hours",
+      "slug": "opening_hours",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "help_text": "Weekly opening hours",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "regular_expression": "/^([01]?[0-9]|2[0-3]):[0-5][0-9]-([01]?[0-9]|2[0-3]):[0-5][0-9]$/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Day of Week",
+      "slug": "day_of_week",
+      "parent_id": "{{getAttributeGroup('print_versions', 'opening_hours', 'branch', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Opens",
+      "slug": "opens",
+      "parent_id": "{{getAttributeGroup('print_versions', 'opening_hours', 'branch', 'blocks')}}",
+      "data_type": "time",
+      "appearance": "time",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "09:00",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Closes",
+      "slug": "closes",
+      "parent_id": "{{getAttributeGroup('print_versions', 'opening_hours', 'branch', 'blocks')}}",
+      "data_type": "time",
+      "appearance": "time",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": true,
+      "is_hidden": false,
+      "placeholder": "19:00",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Special Opening hours",
+      "slug": "special_opening_hours",
+      "data_type": "group",
+      "is_array": true,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "help_text": "Holiday hours or exceptions",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "validations": {
+        "regular_expression": "/^(\\d{4}-\\d{2}-\\d{2})?\\s*([01]?[0-9]|2[0-3]):[0-5][0-9]-([01]?[0-9]|2[0-3]):[0-5][0-9]$/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Day of Week",
+      "slug": "day_of_week",
+      "parent_id": "{{getAttributeGroup('print_versions', 'special_opening_hours', 'branch', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Opens",
+      "slug": "opens",
+      "parent_id": "{{getAttributeGroup('print_versions', 'special_opening_hours', 'branch', 'blocks')}}",
+      "data_type": "time",
+      "appearance": "time",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "09:00",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Closes",
+      "slug": "closes",
+      "parent_id": "{{getAttributeGroup('print_versions', 'special_opening_hours', 'branch', 'blocks')}}",
+      "data_type": "time",
+      "appearance": "time",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "19:00",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Valid From",
+      "slug": "valid_from",
+      "parent_id": "{{getAttributeGroup('print_versions', 'special_opening_hours', 'branch', 'blocks')}}",
+      "data_type": "date",
+      "appearance": "date",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "2025-12-18",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Valid Through",
+      "slug": "valid_through",
+      "parent_id": "{{getAttributeGroup('print_versions', 'special_opening_hours', 'branch', 'blocks')}}",
+      "data_type": "date",
+      "appearance": "date",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "placeholder": "2026-01-04",
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Social Profiles",
+      "slug": "social_profiles",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "social_profiles"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Social Profile",
+      "slug": "social_profile",
+      "parent_id": "{{getAttributeGroup('print_versions', 'social_profiles', 'branch', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "list",
+      "options": [
+        "Facebook",
+        "Instagram",
+        "LinkedIn",
+        "TikTok",
+        "Twitter",
+        "Pinterest",
+        "Youtube"
+      ],
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "social_profiles.social_profile"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Url",
+      "slug": "url",
+      "parent_id": "{{getAttributeGroup('print_versions', 'social_profiles', 'branch', 'blocks')}}",
+      "data_type": "text",
+      "appearance": "short",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "social_profiles.url",
+      "validations": {
+        "regular_expression": "/^https?:\\/\\/.+/"
+      }
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Accesibility",
+      "slug": "accesibility",
+      "data_type": "group",
+      "is_array": false,
+      "is_disabled": false,
+      "appearance": "default",
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks",
+      "full_slug": "accesibility"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Wheelchair-accesible entrance",
+      "slug": "wheelchair_accessible_entrance",
+      "parent_id": "{{getAttributeGroup('print_versions', 'accesibility', 'branch', 'blocks')}}",
+      "data_type": "boolean",
+      "appearance": "checkbox",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Wheelchair-accessible restroom",
+      "slug": "wheelchair_accessible_restroom",
+      "parent_id": "{{getAttributeGroup('print_versions', 'accesibility', 'branch', 'blocks')}}",
+      "data_type": "boolean",
+      "appearance": "checkbox",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Wheelchair-accessible seating",
+      "slug": "wheelchair_accessible_seating",
+      "parent_id": "{{getAttributeGroup('print_versions', 'accesibility', 'branch', 'blocks')}}",
+      "data_type": "boolean",
+      "appearance": "checkbox",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Wheelchair-accessible parking",
+      "slug": "wheelchair_accessible_parking",
+      "parent_id": "{{getAttributeGroup('print_versions', 'accesibility', 'branch', 'blocks')}}",
+      "data_type": "boolean",
+      "appearance": "checkbox",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  },
+  {
+    "object_type": "attributes",
+    "data": {
+      "title": "Wheelchair-accessible elevator",
+      "slug": "wheelchair_accessible_elevator",
+      "parent_id": "{{getAttributeGroup('print_versions', 'accesibility', 'branch', 'blocks')}}",
+      "data_type": "boolean",
+      "appearance": "checkbox",
+      "is_array": false,
+      "has_index": false,
+      "allow_facets": false,
+      "is_required": false,
+      "is_hidden": false,
+      "template_id": "{{getRecordAttribute('content_templates', 'slug', 'store-branch')}}",
+      "object_type": "print_versions",
+      "template_type": "blocks"
+    }
+  }
+]
